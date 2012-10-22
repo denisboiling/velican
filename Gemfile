@@ -11,7 +11,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'paperclip'
 gem 'unicorn'
+gem 'activeadmin'
+gem 'russian'
 
 group :development do
   gem 'sqlite3'
@@ -21,4 +24,5 @@ group :development do
   gem 'debugger'
   gem 'quiet_assets'
   gem 'letter_opener'
+  gem 'ffaker'
 end
