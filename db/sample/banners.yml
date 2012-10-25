@@ -1,0 +1,4 @@
+<% 5.times.each do |i| %>
+banner_<%= i %>:
+  text: <%= Faker::HTMLIpsum.fancy_string(1, true) %>
+<% end %>

@@ -1,12 +1,12 @@
 <div id="slides" class="mainwidth">
   <div class="slide_container">
     <ul style="width: 1614px; margin-left: -807px; ">
-      <li style="float: left; ">
-        <a> <img src="/assets/banner2.png" alt="slide"> </a>
-      </li>
-      <li style="float: left; ">
-        <a> <img src="/assets/banner.png" alt="slide"> </a>
-      </li>
+      <% Banner.all.each do |banner| %>
+	<li style="float: left; ">
+	  <%= link_to image_tag(banner.image.url(:medium)), '#' %>
+	  <%= banner.text %>
+	</li>
+      <% end %>
     </ul>
 
   </div>

@@ -6,6 +6,11 @@ ru:
         few: Сообщения
         many: Сообщения
         other: Сообщения
+      banner:
+        one: Баннер
+        few: Баннеры
+        many: Баннеры
+        other: Баннеры
       product:
         one: Товар
         few: Товары
@@ -32,4 +37,7 @@ ru:
         title: Название страницы
         keywords: Ключивые слова
         description: Описание
+        text: Текст
+      banner:
+        image: Изображение
         text: Текст
