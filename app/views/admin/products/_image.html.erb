@@ -1,5 +1,4 @@
-<div class="images">
-  <div class="image">
-    <%= image_tag image.image.url %>
-  </div>
+<div class="image">
+  <%= image_tag image.image.url %>
+  <%= link_to "Удалить фотографию", destroy_image_admin_products_path(id: image.id), method: :delete, remote: true, onclick: '$(this).parent().remove();' %>
 </div>

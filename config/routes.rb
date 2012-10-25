@@ -1,4 +1,12 @@
 Velican::Application.routes.draw do
+  # Admin panel
+  namespace :admin do
+    resources :products do
+      post :add_image, on: :member
+      delete :destroy_image, on: :collection
+    end
+  end
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
