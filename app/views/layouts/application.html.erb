@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Velican</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>БелВеликан</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= render 'shared/header' %>
+    <%= render 'shared/head' %>
 
-<%= yield %>
+    <div id="order">
+      <div class="center">
+        <div class="order_cl"><button></button></div>
+        <p>Наименований в корзине:</p>
+        <div class="quantity">5</div>
+        <button></button>
+      </div>
+    </div>
 
-</body>
+    <%= render 'shared/slider' %>
+
+    <div id="main" class="mainwidth">
+      <%= yield %>
+    </div>
+
+    <div class="cl"></div>
+
+    <%= render 'shared/footer' %>
+
+  </body>
 </html>
