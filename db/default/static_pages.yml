@@ -1,0 +1,11 @@
+about:
+  name: О компании
+  permalink: about
+
+contacts:
+  name: Контакты
+  permalink: contacts
+
+delivery:
+  name: Доставка
+  permalink: delivery

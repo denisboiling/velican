@@ -6,5 +6,7 @@ Velican::Application.routes.draw do
   resources :products, only: [:index, :show]
   resource :cart, only: [:show]
   resource :main, only: :show
+
+  match "/pages/*id" => 'pages#show', :as => :page, :format => false
   root to: 'mains#index'
 end

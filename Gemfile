@@ -16,6 +16,10 @@ gem 'unicorn'
 gem 'activeadmin'
 gem 'devise-russian'
 gem 'russian'
+gem 'high_voltage'
+gem 'active_admin_editor'
+gem 'client_side_validations'
+gem 'client_side_validations-formtastic'
 gem 'exception_notification'
 
 group :development do

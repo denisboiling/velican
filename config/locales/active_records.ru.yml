@@ -11,6 +11,11 @@ ru:
         few: Товары
         many: Товары
         other: Товары
+      static_page:
+        one: Страница
+        few: Страници
+        many: Страници
+        other: Страници
     attributes:
       product:
         title: Наименование
@@ -21,3 +26,10 @@ ru:
         logo: Основная картинка
       image:
         image: Фотография
+      static_page:
+        name: Название
+        permalink: Адресс страницы
+        title: Название страницы
+        keywords: Ключивые слова
+        description: Описание
+        text: Текст
