@@ -1,0 +1,23 @@
+ru:
+  activerecord:
+    models:
+      message:
+        one: Сообщение
+        few: Сообщения
+        many: Сообщения
+        other: Сообщения
+      product:
+        one: Товар
+        few: Товары
+        many: Товары
+        other: Товары
+    attributes:
+      product:
+        title: Наименование
+        size_range: Диапозон размеров
+        price: Цена
+        label: Лайбл
+        category: Категория
+        logo: Основная картинка
+      image:
+        image: Фотография

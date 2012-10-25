@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source :rubygems
 
 gem 'rails', '3.2.8'
 gem 'sqlite3'
@@ -14,7 +14,9 @@ gem 'jquery-rails'
 gem 'paperclip'
 gem 'unicorn'
 gem 'activeadmin'
+gem 'devise-russian'
 gem 'russian'
+gem 'exception_notification'
 
 group :development do
   gem 'sqlite3'

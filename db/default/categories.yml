@@ -1,0 +1,29 @@
+blouses:
+  id: 1
+  title: Блузки
+
+sundresses:
+  id: 2
+  title: Сарафаны
+
+jackets:
+  id: 3
+  title: Пиджаки
+
+dresses:
+  id: 4
+  title: Платья
+
+vests:
+  id: 5
+  title: Жилеты
+
+jumpers:
+  id: 6
+  title: Джампера
+
+tunucs:
+  id: 7
+  title: Туники
+
+

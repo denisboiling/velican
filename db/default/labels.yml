@@ -1,0 +1,11 @@
+hit:
+  id: 1
+  title: HIT
+
+new:
+  id: 2
+  title: New
+
+sale:
+  id: 3
+  title: Sale
