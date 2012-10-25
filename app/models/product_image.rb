@@ -7,4 +7,6 @@ class ProductImage < ActiveRecord::Base
                            default_style: :thumb, default_url: 'loading.gif'
 
   attr_accessible :image, :product_id
+
+  validates :images, :product_id, presence: true
 end

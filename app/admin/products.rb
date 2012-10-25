@@ -30,6 +30,9 @@ ActiveAdmin.register Product do
     column :label
     column :category
     column :price
+    column "Количество фотографий" do |product|
+      product.images.count
+    end
     default_actions
   end
 end

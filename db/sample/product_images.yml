@@ -1,0 +1,6 @@
+<% 16.times.each do |product_id| %>
+<% rand(5).times.each do |i| %>
+product_image_<%= product_id %>_<%= i %>:
+  product_id: <%= product_id %>
+<% end %>
+<% end %>
