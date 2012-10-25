@@ -6,10 +6,10 @@
     Использование любых материалов, заимствованных с сервиса без разрешения администрации, запрещено.
   </div>
   <div class="menu">
-    <a href="#">Главная</a>
-    <a href="#" class="active">Каталог</a>
-    <a href="#">О компании</a>
-    <a href="#">Контакты</a>
-    <a href="#">Доставка</a>
+    <%= link_to 'Главная', root_path, class: active_page('main') %>
+    <%= link_to 'Каталог', products_path, class: active_page('products') %>
+    <%= link_to 'О компании', page_path('about'), class: active_page('about') %>
+    <%= link_to 'Контакты', page_path('contacts'), class: active_page('contacts') %>
+    <%= link_to 'Доставка', page_path('delivery'), class: active_page('delivery') %>
   </div>
 </div>

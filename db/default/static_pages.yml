@@ -1,3 +1,7 @@
+main:
+  name: Главная страница
+  permalink: main
+
 about:
   name: О компании
   permalink: about
