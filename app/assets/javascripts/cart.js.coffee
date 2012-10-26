@@ -13,7 +13,7 @@ get_cart_data =() ->
   $.getJSON '/cart/remote_cart.json', (data) ->
     return if data.order == null
     price = parseFloat(data.order.full_price).toFixed(2)
-    quantity = data.line_item_ids.length
+    quantity = data.line_items.length
     update_products_quantity(data.line_items)
     update_cart(quantity, price)
 
@@ -26,7 +26,7 @@ add_to_cart =(product, count) ->
       count: count
     success: (data) ->
       price = parseFloat(data.order.full_price).toFixed(2)
-      quantity = data.line_item_ids.length
+      quantity = data.line_items.length
       update_cart(quantity, price)
 
 show_cart =() ->

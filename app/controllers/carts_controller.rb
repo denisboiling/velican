@@ -9,8 +9,7 @@ class CartsController < ApplicationController
     respond_to do |format|
       format.json { render :json => {
 	  order: order,
-          line_item_ids: order.line_item_ids,
-          line_items: order.line_items.map {|li| { product_id: li.product_id, quantity: li.count }}
+          line_items: order.present? ? order.line_items.map {|li| { product_id: li.product_id, quantity: li.count }} : []
 	}
       }
     end
@@ -21,7 +20,6 @@ class CartsController < ApplicationController
     respond_to do |format|
       format.json { render :json => {
 	  order: order,
-          line_item_ids: order.line_item_ids,
           line_items: order.line_items.map {|li| { product_id: li.product_id, quantity: li.count }}
 	}
       }

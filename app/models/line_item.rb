@@ -4,6 +4,8 @@ class LineItem < ActiveRecord::Base
 
   attr_accessible :product_id, :order_id, :count, :price
 
+  validates :count, :numericality => true, :length => { :minimum => 0 }
+
   before_save :update_price
 
   def update_price
