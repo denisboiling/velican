@@ -1,40 +1,21 @@
-<div class="item">
-  <div class="item_container">
-    <div class="head" style="background: url(/assets/bg1.png)">Название товара</div>
-    <div class="product"><img src="/assets/product1.jpg" alt="" /></div>
-    <div class="popup">
-      <h2>Наименование изделия</h2>
-      <p>Размер: <span>52-64</span></p>
-      <h2><span>3289 </span>руб.</h2>
-      <div class="cart"><a href="#">В корзину</a><input type="text" value></div>
+<%= @products.each do |product| %>
+  <div class="item">
+    <div class="item_container">
+      <div class="head" style="background: url(/assets/bg1.png)">здесь название лайбла</div>
+      <div class="product"><%= image_tag product.logo.url(:big) %></div>
+      <div class="popup">
+	<h2><%= product.title %></h2>
+	<p>Размер: <span><%= product.size_range %></span></p>
+	<h2><span><%= product.price %></span> руб.</h2>
+	<div class="cart">
+	  <%= link_to 'В корзину', '', class: 'add_to_cart' %>
+	  <%= number_field_tag :count, '', :class => 'count_field', 'data-product-id' => product.id %>
+	</div>
+      </div>
     </div>
   </div>
-</div>
-<div class="item">
-  <div class="item_container">
-    <div class="head" style="background: url(/assets/bg2.png)">Название товара</div>
-    <div class="product"><img src="/assets/product1.jpg" alt="" /></div>
-    <div class="popup">
-      <h2>Наименование изделия</h2>
-      <p>Размер: <span>52-64</span></p>
-      <h2><span>3289 </span>руб.</h2>
-      <div class="cart"><a href="#">В корзину</a><input type="text" value></div>
-    </div>
-  </div>
+<% end %>
 
-</div>
-<div class="item">
-  <div class="item_container">
-    <div class="head" style="background: url(/assets/bg3.png)">Название товара</div>
-    <div class="product"><img src="/assets/product1.jpg" alt="" /></div>
-    <div class="popup">
-      <h2>Наименование изделия</h2>
-      <p>Размер: <span>52-64</span></p>
-      <h2><span>3289 </span>руб.</h2>
-      <div class="cart"><a href="#">В корзину</a><input type="text" value="шт."></div>
-    </div>
-  </div>
-</div>
 
 <div class="cl"></div>
 <div class="text_container">

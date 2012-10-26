@@ -16,5 +16,10 @@ Velican::Application.routes.draw do
   resource :main, only: :show
 
   match "/pages/*id" => 'pages#show', :as => :page, :format => false
+
+  match '/cart/remote_cart.json' => 'carts#remote_cart'
+  match '/cart/add_to_cart' => 'carts#add_to_cart', :via => :put
+  match '/cart/destroy_order' => 'carts#destroy_order', :via => :delete
+
   root to: 'mains#index'
 end

@@ -23,6 +23,7 @@ gem 'client_side_validations-formtastic'
 gem 'exception_notification'
 gem 'will_paginate'
 gem 'meta_search'
+gem 'state_machine'
 
 group :development do
   gem 'sqlite3'

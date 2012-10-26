@@ -1,7 +1,9 @@
 class Product < ActiveRecord::Base
   belongs_to :label
   belongs_to :category
+
   has_many :images, dependent: :destroy, class_name: 'ProductImage'
+  has_many :line_items
 
   has_attached_file :logo, styles: { thumb: '100x100', big: '310x368!', medium: '215x257' },
                             path: ":rails_root/public/system/:class/:attachment/:id/:style/:filename",

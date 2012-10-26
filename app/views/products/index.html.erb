@@ -13,7 +13,12 @@
 	<h2><%= product.title %></h2>
 	<p>Размер: <span><%= product.size_range %></span></p>
 	<h2><span><%= product.price %></span>руб.</h2>
-	<div class="cart"><a href="#">В корзину</a><input type="text" value=""></div>
+
+	<div class="cart">
+	  <%= link_to 'В корзину', '', class: 'add_to_cart' %>
+	  <%= number_field_tag :count, '', :class => 'count_field', 'data-product-id' => product.id %>
+	</div>
+
       </div>
     </div>
   </div>
