@@ -2,11 +2,13 @@
   <div class="center">
     
     <% Label.all.each do |label| -%>
-      <%= link_to(label.title, '', class: 'filters') if label.products.present? -%>
+      <%= link_to(label.title, products_path(label: label.title), class: "filters #{active_label(label)}") if label.products.present? -%>
     <% end %>
     <div class="search">
-      <input type="text" value>
-      <button>Поиск</button>
+      <%= form_tag products_path do %>
+	<%= text_field_tag :q %>
+	<%= submit_tag 'Поиск' %>
+      <% end %>
     </div>
   </div>
 </div>

@@ -21,6 +21,8 @@ gem 'active_admin_editor'
 gem 'client_side_validations'
 gem 'client_side_validations-formtastic'
 gem 'exception_notification'
+gem 'will_paginate'
+gem 'meta_search'
 
 group :development do
   gem 'sqlite3'
