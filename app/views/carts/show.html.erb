@@ -1,16 +1,16 @@
 <% @order.line_items.each do |li| %>
-  <div class="item">
+  <div class="item or">
     <div class="rights">
-      <div class="price" style="text-align: left; margin-right: 125px">
+      <div class="price or" style="text-align: left; margin-right: 125px">
 	<h2><%= li.product.title %></h2>
 	<p>Размер: <span><%= li.product.size_range %></span></p>
 	<h2><span><%= li.product.price %> </span>руб.</h2>
       </div>
-      <div class="quantity" style="margin-right: 130px">
+      <div class="quantity or" style="margin-right: 130px">
 	<h2>Количество единиц изделия</h2>
 	<%= number_field_tag :count, li.count, min: 0 %>
       </div>
-      <div class="sum">
+      <div class="sum or">
 	<h2>Стоимость изделия</h2>
 	<p><span><%= number_to_currency(li.price) %> </span>руб.</p>
       </div>
@@ -37,7 +37,7 @@
     <%= f.email_field :customer_email %>
     <%= f.text_field :customer_address %>
     <%= f.text_area :comment %>
-    <%= f.submit 'Оформить заказ' %>
-    <%= link_to 'Отменить заказ', destroy_order_path, method: :delete %>
+    <%= f.submit '', class:'ord_cart' %>
+    <%= link_to '', destroy_order_path, method: :delete, class:'or_c' %>
   <% end %>
 </div>

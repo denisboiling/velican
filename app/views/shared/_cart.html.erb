@@ -1,10 +1,10 @@
 <div id="order">
   <div class="center">
-    <div class="order_cl"><%= link_to 'Очистить корзину', '/cart/destroy_order', method: :delete %></div>
+    <div class="order_cl"><%= link_to '', '/cart/destroy_order', method: :delete, class:'cl' %></div>
     <p>Наименований в корзине:</p>
-    <div class="quantity" id="cart_quantity">0</div>
+    <div class="quantity name" id="cart_quantity">0</div>
     <p>Цена:</p>
-    <div class="quantity" id="cart_price">0 руб.</div>
-    <%= link_to 'Оформить заказ', cart_path %>
+    <div class="quantity price" id="cart_price">0 руб.</div>
+    <%= link_to '', cart_path, class:'ord' %>
   </div>
 </div>
