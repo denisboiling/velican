@@ -4,6 +4,6 @@ drees_<%= i %>:
   label_id: <%= rand(2) == 1 ? rand(1..3) : nil %>
   category_id: <%= rand(1..7) %>
   title: <%= Faker::Lorem.words.join(' ') %>
-  price: <%= "#{rand(9999)}.#{rand(99)}".to_f %>
+  price: <%= "#{rand(9999)}.#{rand(99)}" %>
   size_range: <%= "#{rand(99)} - #{rand(99)}" %>
 <% end %>
