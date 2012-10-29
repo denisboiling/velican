@@ -7,9 +7,20 @@ class LineItem < ActiveRecord::Base
   validates :count, :numericality => true, :length => { :minimum => 0 }
 
   before_save :update_price
+  after_save :update_order_price
+  after_destroy :update_order_price
 
   def update_price
     self.price = self.count * self.product.price
+  end
+
+  def update_price!
+    self.update_price
+    self.save
+  end
+
+  def update_order_price
+    self.order.update_price!
   end
 
   class << self
@@ -27,6 +38,5 @@ class LineItem < ActiveRecord::Base
       Order.find(order)
     end
   end
-
 
 end

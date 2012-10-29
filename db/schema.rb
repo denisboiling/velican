@@ -77,12 +77,12 @@ ActiveRecord::Schema.define(:version => 20121029072128) do
   end
 
   create_table "line_items", :force => true do |t|
-    t.integer  "product_id",                               :null => false
-    t.integer  "order_id",                                 :null => false
-    t.integer  "count",                                    :null => false
-    t.decimal  "price",      :precision => 6, :scale => 4, :null => false
-    t.datetime "created_at",                               :null => false
-    t.datetime "updated_at",                               :null => false
+    t.integer  "product_id",                                                :null => false
+    t.integer  "order_id",                                                  :null => false
+    t.integer  "count",                                                     :null => false
+    t.decimal  "price",      :precision => 6, :scale => 4, :default => 0.0, :null => false
+    t.datetime "created_at",                                                :null => false
+    t.datetime "updated_at",                                                :null => false
   end
 
   create_table "order_infos", :force => true do |t|

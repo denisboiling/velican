@@ -31,4 +31,8 @@ class Order < ActiveRecord::Base
   def update_price!
     update_attribute(:full_price, self.line_items.sum(:price))
   end
+
+  def uncomplete?
+    state != 'done'
+  end
 end

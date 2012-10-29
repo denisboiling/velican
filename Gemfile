@@ -1,7 +1,7 @@
 source :rubygems
 
 gem 'rails', '3.2.8'
-gem 'sqlite3'
+gem 'pg'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -34,4 +34,8 @@ group :development do
   gem 'quiet_assets'
   gem 'letter_opener'
   gem 'ffaker'
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'capistrano-unicorn'
+  gem 'rvm-capistrano'
 end

@@ -1,0 +1,6 @@
+<% (1..30).each do |i| %>
+order_<%= i %>:
+  id: <%= i %>
+  user_key: aaaaaaaa
+  state: <%= %w(new complete done).sample %>
+<% end %>
