@@ -35,7 +35,6 @@ group :development do
   gem 'letter_opener'
   gem 'ffaker'
   gem 'capistrano'
-  gem 'capistrano-ext'
   gem 'capistrano-unicorn'
   gem 'rvm-capistrano'
 end
