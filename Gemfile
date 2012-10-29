@@ -24,6 +24,7 @@ gem 'exception_notification'
 gem 'will_paginate'
 gem 'meta_search'
 gem 'state_machine'
+gem 'ffaker'
 
 group :development do
   gem 'sqlite3'
@@ -33,7 +34,6 @@ group :development do
   gem 'debugger'
   gem 'quiet_assets'
   gem 'letter_opener'
-  gem 'ffaker'
   gem 'capistrano'
   gem 'capistrano-unicorn'
   gem 'rvm-capistrano'
