@@ -5,6 +5,10 @@ Velican::Application.routes.draw do
       post :add_image, on: :member
       delete :destroy_image, on: :collection
     end
+    resources :orders do
+      delete :remove_line_item, on: :member
+      put :done_order, on: :member
+    end
   end
 
   ActiveAdmin.routes(self)

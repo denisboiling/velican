@@ -14,6 +14,9 @@ class Order < ActiveRecord::Base
     end
   end
 
+  scope :complete, where(state: 'complete')
+  scope :done, where(state: 'done')
+
   after_create :assign_info
 
   def assign_info

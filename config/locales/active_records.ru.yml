@@ -21,6 +21,11 @@ ru:
         few: Страници
         many: Страници
         other: Страници
+      order:
+        one: Заказ
+        few: Заказы
+        many: Заказы
+        other: Заказы
     attributes:
       product:
         title: Наименование
@@ -41,3 +46,8 @@ ru:
       banner:
         image: Изображение
         text: Текст
+      order:
+        full_price: Общая цена
+        created_at: Дата создания
+        updated_at: Дата последнего обновления
+        state: Статус
