@@ -1,7 +1,18 @@
+# -*- coding: utf-8 -*-
 class CartsController < ApplicationController
   before_filter :get_user_key
 
   def show
+    @order = Order.find_by_user_key(@user_key)
+  end
+
+  def update
+    @order = Order.find_by_user_key(@user_key)
+    @order.info.update_attributes(params[:order_info])
+    @order.to_complete!
+    cookies.delete :user_key
+    flash[:notice] = 'Заявка отправленна, с вами созвоняться'
+    redirect_to root_path
   end
 
   def remote_cart

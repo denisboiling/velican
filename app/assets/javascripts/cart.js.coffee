@@ -40,7 +40,10 @@ $ ->
 
   $("a.add_to_cart").live 'click', () ->
     text_field = $(this).parent().find("input.count_field:first")
-    product = text_field.attr('data-product-id')
-    count = text_field.val()
-    add_to_cart(product, count)    
-    false
+    if text_field.val() == '' || text_field.val() <= 0
+      false
+    else
+      product = text_field.attr('data-product-id')
+      count = text_field.val()
+      add_to_cart(product, count)    
+      false

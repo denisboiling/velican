@@ -9,7 +9,7 @@
 	<h2><span><%= product.price %></span> руб.</h2>
 	<div class="cart">
 	  <%= link_to 'В корзину', '', class: 'add_to_cart' %>
-	  <%= number_field_tag :count, '', :class => 'count_field', 'data-product-id' => product.id %>
+	  <%= number_field_tag :count, '', :class => 'count_field', 'data-product-id' => product.id, :min => 0 %>
 	</div>
       </div>
     </div>
