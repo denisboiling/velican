@@ -41,7 +41,11 @@ class CartsController < ApplicationController
 
   def destroy_order
     Order.where('state != ? AND user_key = ?', 'done', @user_key).last.destroy
-    redirect_back_or_default
+    if request.xhr?
+      render text: 'ok'
+    else
+      redirect_back_or_default
+    end
   end
 
   private

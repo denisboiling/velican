@@ -40,6 +40,16 @@ show_cart =() ->
 hide_cart =() ->
   $("div#order").hide()
 
+destroy_order =() ->
+  $.ajax
+    type: 'DELETE'
+    url: '/cart/destroy_order'
+    complete: (data) ->
+      hide_cart()
+      $("input.count_field").each ->
+        $(this).val(0)
+
+
 $ ->
   get_cart_data()
 
@@ -58,3 +68,7 @@ $ ->
       if $(this).hasClass != 'active'
         $(this).addClass('active')
       false
+
+  $("a#destroy_order").live 'click', () ->
+    destroy_order()
+    false
