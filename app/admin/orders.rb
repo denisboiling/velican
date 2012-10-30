@@ -2,7 +2,6 @@
 ActiveAdmin.register Order do
   menu label: 'Заказы'
 
-  scope :all
   scope :complete, default: true
   scope :done
 
@@ -34,7 +33,10 @@ ActiveAdmin.register Order do
     column :full_price do |order|
       number_to_currency(order.full_price)
     end
-    default_actions
+    column 'Действия' do |order|
+      raw [link_to('Открыть', admin_order_path(order)),
+           link_to('Удалить', admin_order_path(order), method: :delete)].join(' ')
+    end
   end
 
   show do
@@ -67,13 +69,13 @@ ActiveAdmin.register Order do
                                      :remote => true,
                                      'data-line-item-id' => li.id,
                                      :class => 'remove_link'
-        end
+        end if resource.uncomplete?
       end
     end
 
-    panel 'Действие' do
+    panel 'Действия' do
       link_to 'Отметить как выполенный', done_order_admin_order_path(resource), method: :put
-    end
+    end if resource.uncomplete?
 
   end
 end

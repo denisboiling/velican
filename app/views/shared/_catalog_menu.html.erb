@@ -1,0 +1,8 @@
+<div id="catalog_menu">
+  <div class="center">
+    <% Category.all.each do |category| %>
+      <%= link_to(category.title, products_path(category: category.title), class: "menu #{active_category(category)}") if category.products.present? -%>
+    <% end %>
+    <div class="cl"></div>
+  </div>
+</div>

@@ -3,7 +3,7 @@ class CreateOrders < ActiveRecord::Migration
     create_table :orders do |t|
       t.string :state
       t.string :user_key, null: false
-      t.decimal :full_price, :precision => 6, :scale => 4, null: false, default: 0.00
+      t.decimal :full_price, :precision => 10, :scale => 2, null: false, default: 0.00
       t.timestamps
     end
   end

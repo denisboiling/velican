@@ -39,7 +39,7 @@ class CartsController < ApplicationController
 
   def destroy_order
     Order.where('state != ? AND user_key = ?', 'done', @user_key).last.destroy
-    redirect_to root_path
+    redirect_back_or_default
   end
 
   private

@@ -1,0 +1,8 @@
+<% (1..30).each do |i| %>
+order_info_<%= i %>:
+  order_id: <%= i %>
+  customer_name: <%= Faker::Name.name %>
+  customer_email: <%= Faker::Internet.email %>
+  customer_address: <%= Faker::Address.street_address %>
+  comment: <%= Faker::Lorem.paragraph if rand(2) == 1 %>
+<% end %>

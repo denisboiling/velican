@@ -1,6 +1,11 @@
 ru:
   activerecord:
     models:
+      admin_user:
+        one: Администратор
+        few: Администраторы
+        many: Администраторы
+        other: Администраторы
       message:
         one: Сообщение
         few: Сообщения
