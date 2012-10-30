@@ -15,7 +15,5 @@ class Product < ActiveRecord::Base
 
   validates :title, :price, :logo, :category, :size_range, presence: true
 
-  accepts_nested_attributes_for :images, allow_destroy: true, reject_if: :all_blank
-
   scope :without_label, where(label_id: nil)
 end
