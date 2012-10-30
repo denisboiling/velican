@@ -63,6 +63,10 @@ $ ->
     if $(this).val() <= 0
       $(this).val('')
 
+  $("input.count_field").blur ->
+    if $(this).val() == ''
+      $(this).val(0)
+
   $("a.add_to_cart").live 'click', () ->
     text_field = $(this).parent().find("input.count_field:first")
     if text_field.val() == '' || text_field.val() <= 0
