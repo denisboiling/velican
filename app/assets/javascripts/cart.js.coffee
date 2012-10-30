@@ -41,6 +41,10 @@ hide_cart =() ->
 $ ->
   get_cart_data()
 
+  $("input.count_field").live 'click', () ->
+    if $(this).val() <= 0
+      $(this).val('')
+
   $("a.add_to_cart").live 'click', () ->
     text_field = $(this).parent().find("input.count_field:first")
     if text_field.val() == '' || text_field.val() <= 0

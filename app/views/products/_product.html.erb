@@ -15,7 +15,7 @@
 
       <div class="cart pr">
 	<%= link_to 'В корзину', '', class: 'add_to_cart' %>
-	<%= number_field_tag :count, '', :class => 'count_field', 'data-product-id' => product.id, :min => 0 %>
+	<%= number_field_tag :count, 0, :class => 'count_field', 'data-product-id' => product.id, :min => 0 %>
       </div>
 
     </div>
