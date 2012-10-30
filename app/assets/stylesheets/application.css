@@ -2,14 +2,22 @@
  *= require_self
  */
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
 * {padding: 0px; margin: 0px;}
 html, body {width: 100%; height: 100%; font: 18px Trebuchet MS; color: #fff; margin: 0px auto;}
 .floatfix {zoom: 1; overflow: hidden}
 .cl {clear: both; line-height: 0px; display: block}
 .mainwidth {width: 960px; margin: 0px auto; position: relative}
 .spacer {height: 25px}
-.divider {height: 26px; width: 1px; border-left: 3px solid #78c0e6; display: inline-block; margin-bottom: -10px}
+.divider {width: 100%; height: 1px; border-top: 1px solid #F1E2EF; margin-top: 50px; margin-bottom: 50px; float: left;}
 img {border: none;}
+
 
 body {background: #fff}
 .center {width: 809px; margin: 0px auto}
@@ -37,7 +45,7 @@ body {background: #fff}
 #popup_pr .info h2 span {font: bold 24px Arial; } 
 #popup_pr .info p {font: bold 14px Arial; color: #686868; margin-top: 5px}
 #popup_pr .info span {font: bold 14px Arial; color: #a7519a} 
-#popup_pr .cart {background: url(/assets/trach.png) no-repeat; width: 115px; height: 24px; float: right; margin-top: -29px; margin-right: 5px}
+#popup_pr .cart {background: url(/assets/trash_in.png) no-repeat; width: 115px; height: 24px; float: right; margin-top: -29px; margin-right: 5px}
 #popup_pr .cart input {width: 23px; height: 13px; border: 1px solid #2aba74; padding-left: 2px; padding-bottom: 1px; vertical-align: middle; color: #686868}
 #popup_pr .cart a {font: 14px Arial; color: #fff; text-decoration: none; margin: 0px 5px 0px 10px}
 
@@ -46,33 +54,52 @@ body {background: #fff}
 #head {background: url(/assets/head_bg.png) repeat; height: 113px;}
 #head .center {width: 809px; margin: 0px auto}
 #head .filters {width: 128px; height: 24px; float: right; font: 14px Arial; text-align: center; margin-left: 20px; margin-top: 30px; line-height: 24px; text-decoration: none; color: #fff}
+#head .filters.HIT {background: url(/assets/filter1.png);} 
+#head .filters.New {background: url(/assets/filter2.png);} 
+#head .filters.Sale {background: url(/assets/filter3.png);} 
 #head .filters:hover {opacity: 0.5}
 #head .search {float: left; margin-top: 30px}
 #head .search input {width: 255px; height: 20px; border: 2px solid #854585; border-radius: 3px; padding-left: 10px; color: #686868}
+#head .search input.s {padding-left: 0px; width: 50px; height: 24px; background: url(search_b.png); cursor: pointer; border: none; color: white;}
 #head .search button {width: 50px; height: 24px; background: url(/assets/search_b.png); cursor: pointer; border: none; color: #fff} 
 #head .search button:hover {opacity: 0.5} 
 
 /*	CART	*/
-#cart {}
-#cart .item {position: relative; padding: 15px 0px}
-#cart .rights {float: right;}
-#cart .rights div {float: left; text-align: center; width: 200px}
-#cart .item .price h2 {font: 14px Arial; color: #a7519a; margin-top: 5px} 
-#cart .item .price h2 span {font: bold 24px Arial; } 
-#cart .item .price p {font: bold 14px Arial; color: #686868; margin-top: 5px}
-#cart .item .price span {font: bold 14px Arial; color: #a7519a} 
-#cart .item .quantity {font: 14px Arial; color: #a7519a; margin-top: 5px}
-#cart .item .sum h2 span {font: bold 24px Arial; color: #686868} 
+#main .item.or {position: relative; padding: 15px 0px; height: 85px; background: none}
+#main .rights {float: right; margin-left: 10px}
+#main .rights div {float: left; text-align: center; width: 200px}
+#main .item .price.or h2 {font: 14px Arial; color: #a7519a; margin-top: 5px} 
+#main .item .price h2.or span {font: bold 24px Arial; } 
+#main .item .price.or p {font: bold 14px Arial; color: #686868; margin-top: 5px}
+#main .item .price.or span {font: bold 14px Arial; color: #a7519a} 
+#main .item .quantity.or h2 {font: 14px Arial; color: #a7519a; margin-top: 5px}
+#main .item .quantity.or input {text-align: center; padding: 0px 3px; color: #686868; border-radius: 4px; width: 80px; height: 22px; border: 1px solid #ECD1E6; margin-top: 10px; outline: none; background: #F2E5F0;} 
+#main .item .sum.or h2 {font: 14px Arial; color: #a7519a; margin-top: 5px}
+#main .item .sum.or h2 span {font: bold 24px Arial; color: #686868} 
+#main .item .sum.or p {font: 14px Arial; color: #686868}
+#main .item .sum.or p span {font: bold 24px Arial; color: #686868}
+#main .checkout {margin-top: 30px; height: 100px;}
+#main .checkout h2 {float: left; width: 398px; font: bold 18px Arial; color: #A7519A;}
+#main .checkout h2 span {font: bold 18px Arial; color: #686868;}
+#main .order_form {margin-bottom: 40px}
+#main .order_form .header {float: left; margin: 40px 0px 10px 0px;  overflow: hidden; color: #686868; font: bold 18px Arial; text-align: center; line-height: 44px; border-radius: 5px; background: #F2E5F0; width: 100%; height: 44px;}
+#main .order_form form input {padding-left: 5px; color: #686868; border-radius: 8px; width: 952px; height: 43px; border: 1px solid #e1e1e1; margin-top: 10px; outline: none}
+#main .order_form form label {color: #686868; font: 12px Arial} 
+#main .order_form form textarea {padding-top: 5px; padding-left: 5px; color: #686868; border-radius: 8px; width: 952px; height: 38px; border: 1px solid #e1e1e1; margin-top: 10px; outline: none}
+#main .order_form .ord_cart {float: left; margin: 30px 32px 30px 0px; cursor: pointer; border: none; width: 548px; height: 44px; background: url(order_b.png) no-repeat;}
+#main .order_form form a.or_c {overflow: hidden; display: block; width: 378px; height: 44px; background: url(order_cl_b.png); margin-left: 2px; margin: 30px 0px; cursor: pointer; border: none;}
 
 /*	ORDER	*/
 #order {background: #f2e5f0; height: 113px; display: none}
 #order .center {width: 809px; margin: 0px auto}
 #order p {padding-top: 25px; color: #A7519A; font: bold 14px Arial; float: left;}
-#order button {cursor: pointer; background: url(/assets/order.png) no-repeat; border: none; width: 146px; height: 24px; float: left; margin: 21px}
+#order a.ord {cursor: pointer; background: url(/assets/order.png) no-repeat; border: none; width: 146px; height: 24px; float: left; margin: 21px}
 #order button:hover {opacity: 0.5}
-#order .order_cl button {cursor: pointer; background: url(/assets/order_cl.png) no-repeat; border: none; width: 146px; height: 24px; float: right; margin: 21px 0px 21px 21px}
+#order .order_cl a.cl {cursor: pointer; background: url(/assets/order_cl.png) no-repeat; border: none; width: 146px; height: 24px; float: right; margin: 21px 0px 21px 21px}
 #order .order_cl button:hover {opacity: 0.5} 
-#order .quantity {display: block; background: url(/assets/bg_or.png) no-repeat; width: 26px; height: 24px; float: left;margin: 21px 0px 21px 5px; font: bold 14px Arial; color: #707070; line-height: 24px; text-align: center;}
+#order .quantity {display: block; border-radius: 6px; background: #fff; width: 26px; height: 24px; float: left;margin: 21px 10px 21px 5px; font: bold 14px Arial; color: #707070; line-height: 24px; text-align: center;}
+#order .quantity.name {width: 43px}
+#order .quantity.price {width: 120px}
 
 /*	SLIDES	*/
 #slides {height: 265px; background: url(/assets/shadow_s.png) no-repeat center bottom; position: relative; margin-top: -35px; margin-bottom: 20px}
@@ -91,23 +118,25 @@ body {background: #fff}
 #catalog_menu .menu:hover {opacity: 0.5} 
 
 /* CATALOG_MAIN */
-#catalog_main {margin-bottom: 50px; margin-top: 20px}
-#catalog_main .item {float: left; margin: 0px 11px 20px; height: 346px; position: relative}
-#catalog_main .label {top: 7px; left: -9px; position: absolute; width: 57px; height: 24px; text-align: center; font: 12px Arial; color: #fff; line-height: 24px}
-#catalog_main .item_container {width: 215px; height: 257px; border: 1px solid #bc80b3; background: #fff; position: relative;}
-#catalog_main .product {width: 215px; height: 257px; background-repeat: no-repeat; background-position: center bottom; margin-bottom: 10px}
-#catalog_main .product:hover {opacity: 0.6;}
-#catalog_main .item_container:hover  {border: 2px solid #bc80b3; margin: -1px}
-#catalog_main .item_container:hover .info {}
-#catalog_main .info {padding: 0px 0px 5px 5px; background: url(/assets/bg_pr.png); left: 0px; right: 0px; bottom: 0px}
-#catalog_main .info:hover {display: block;}
-#catalog_main .info h2 {font: 14px Arial; color: #a7519a; margin-top: 5px} 
-#catalog_main .info h2 span {font: bold 24px Arial; } 
-#catalog_main .info p {font: bold 14px Arial; color: #686868; margin-top: 5px}
-#catalog_main .info span {font: bold 14px Arial; color: #a7519a} 
-#catalog_main .cart {background: url(/assets/trach.png) no-repeat; width: 115px; height: 24px; float: right; margin-top: -29px}
-#catalog_main .cart input {width: 23px; height: 13px; border: 1px solid #2aba74; padding-left: 2px; padding-bottom: 1px; vertical-align: middle; color: #686868}
-#catalog_main .cart a {font: 14px Arial; color: #fff; text-decoration: none; margin: 0px 5px 0px 10px}
+#main .item.pr {background: none; float: left; margin: 0px 11px 20px; height: 346px; position: relative}
+#main .label.pr {top: 7px; left: -9px; position: absolute; width: 57px; height: 24px; text-align: center; font: 12px Arial; color: #fff; line-height: 24px}
+#main .label.pr.sale {background: url(/assets/label3.png);}
+#main .label.pr.new {background: url(/assets/label2.png);}
+#main .label.pr.hit {background: url(/assets/label1.png);}
+#main .item_container.pr {cursor: pointer; width: 215px; height: 257px; border: 1px solid #bc80b3; background: #fff; position: relative;}
+#main .product.pr {width: 215px; height: 257px; background-repeat: no-repeat; background-position: center bottom; margin-bottom: 10px}
+#main .product:hover.pr {opacity: 0.6;}
+#main .item_container:hover.pr  {border: 2px solid #bc80b3; margin: -1px}
+#main .item_container:hover .info.pr {}
+#main .info.pr {padding: 0px; background: url(/assets/bg_pr.png); left: 0px; right: 0px; bottom: 0px}
+#main .info:hover.pr {display: block;}
+#main .info.pr h2 {font: 14px Arial; color: #a7519a; margin-top: 5px} 
+#main .info.pr h2 span{font: bold 24px Arial; } 
+#main .info.pr p {font: bold 14px Arial; color: #686868; margin-top: 5px}
+#main .info.pr span {font: bold 14px Arial; color: #a7519a} 
+#main .cart.pr {background: url(/assets/trash_in.png) no-repeat; width: 115px; height: 24px; float: right; margin-top: -29px}
+#main .cart input.pr {width: 23px; height: 13px; border: 1px solid #2aba74; padding-left: 2px; padding-bottom: 1px; vertical-align: middle; color: #686868}
+#main .cart a.pr {font: 14px Arial; color: #fff; text-decoration: none; margin: 0px 5px 0px 10px}
 
 
 /* MAIN */
@@ -124,10 +153,10 @@ body {background: #fff}
 #main .popup h2 span {font: bold 24px Arial; } 
 #main .popup p {font: bold 14px Arial; color: #686868; margin-top: 5px}
 #main .popup span {font: bold 14px Arial; color: #a7519a} 
-#main .cart {background: url(/assets/trach.png) no-repeat; width: 115px; height: 24px; float: right; margin-top: -29px}
-#main .cart input {width: 23px; height: 13px; border: 1px solid #2aba74; padding-left: 2px; padding-bottom: 1px; vertical-align: middle; color: #686868}
-#main .cart a {font: 14px Arial; color: #fff; text-decoration: none; margin: 0px 5px 0px 10px}
-#main .text_container {background: #f3f3f3; padding: 20px; margin-top: 20px}
+#main .cart {background: url(/assets/trash_in.png) no-repeat; width: 115px; height: 24px; float: right; margin-top: -29px}
+#main .cart input {width: 30px; height: 13px; border: 1px solid #2aba74; padding-left: 2px; padding-bottom: 2px; color: #686868}
+#main .cart a {font: 14px Arial; color: #fff; text-decoration: none; margin: 0px 0px 0px 10px}
+#main .text_container {background: #f3f3f3; padding: 20px; margin-top: 20px; color: #9A9A9A; font: 14px Arial}
 #main .text_container h3 {font: bold 14px Arial; color: #a7519a; margin-top: 10px; margin-bottom: 10px}
 #main .text_container p {font: 14px Arial; color: #9a9a9a; margin-bottom: 15px}
 
