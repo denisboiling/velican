@@ -68,6 +68,7 @@ body {background: #fff}
 #main .item.or {position: relative; padding: 15px 0px; height: 85px; background: none}
 #main .rights {float: right; margin-left: 10px}
 #main .rights div {float: left; text-align: center; width: 200px}
+#main img {border-radius: 8px}
 #main .item .price.or h2 {font: 14px Arial; color: #a7519a; margin-top: 5px} 
 #main .item .price h2.or span {font: bold 24px Arial; } 
 #main .item .price.or p {font: bold 14px Arial; color: #686868; margin-top: 5px}
@@ -83,9 +84,9 @@ body {background: #fff}
 #main .checkout h2 span {font: bold 18px Arial; color: #686868;}
 #main .order_form {margin-bottom: 40px}
 #main .order_form .header {float: left; margin: 40px 0px 10px 0px;  overflow: hidden; color: #686868; font: bold 18px Arial; text-align: center; line-height: 44px; border-radius: 5px; background: #F2E5F0; width: 100%; height: 44px;}
-#main .order_form form input {padding-left: 5px; color: #686868; border-radius: 8px; width: 952px; height: 43px; border: 1px solid #e1e1e1; margin-top: 10px; outline: none}
+#main .order_form form input {padding-left: 15px; padding-right: 15px; color: #686868; border-radius: 8px; width: 952px; height: 43px; border: 1px solid #e1e1e1; margin-top: 10px; outline: none}
 #main .order_form form label {color: #686868; font: 12px Arial} 
-#main .order_form form textarea {padding-top: 10px; padding-left: 5px; color: #686868; border-radius: 8px; width: 952px; height: 28px; border: 1px solid #e1e1e1; margin-top: 10px; outline: none}
+#main .order_form form textarea {padding-top: 10px; padding-left: 15px; padding-right: 15px; color: #686868; border-radius: 8px; width: 952px; height: 28px; border: 1px solid #e1e1e1; margin-top: 10px; outline: none}
 #main .order_form .ord_cart {float: left; margin: 30px 32px 30px 0px; cursor: pointer; border: none; width: 548px; height: 44px; background: url(order_b.png) no-repeat;}
 #main .order_form form a.or_c {overflow: hidden; display: block; width: 378px; height: 44px; background: url(order_cl_b.png); margin-left: 2px; margin: 30px 0px; cursor: pointer; border: none;}
 
@@ -144,7 +145,10 @@ body {background: #fff}
 #main {margin-bottom: 100px; margin-top: 20px}
 #main .item {float: left; margin: 0px 3px; background: url(/assets/shadow_p.png) no-repeat center bottom; height: 430px; position: relative}
 #main .item_container {width: 310px; height: 406px; border: 1px solid #bc80b3; background: #fff; position: relative;}
-#main .head {border-bottom: 1px solid #bc80b3; font: 18px Arial; text-align: center; line-height: 37px}
+#main .head {background: #a251a7; border-bottom: 1px solid #bc80b3; font: 18px Arial; text-align: center; line-height: 37px}
+#main .head.hit {background: url(/assets/bg3.png);}
+#main .head.new {background: url(/assets/bg2.png);}
+#main .head.sale {background: url(/assets/bg1.png);}
 #main .product {width: 310px; height: 368px; background-repeat: no-repeat; background-position: center bottom}
 #main .product:hover {opacity: 0.6}
 #main .item_container:hover .popup {display: block}
@@ -155,7 +159,7 @@ body {background: #fff}
 #main .popup p {font: bold 14px Arial; color: #686868; margin-top: 5px}
 #main .popup span {font: bold 14px Arial; color: #a7519a} 
 #main .cart {background: url(/assets/trash_in.png) no-repeat; width: 115px; height: 24px; float: right; margin-top: -29px}
-#main .cart input {width: 30px; height: 13px; border: 1px solid #2aba74; padding-left: 2px; padding-bottom: 2px; color: #686868}
+#main .cart input {width: 30px; height: 13px; border: none; padding-left: 2px; padding-bottom: 2px; color: #686868}
 #main .cart a {font: 14px Arial; color: #fff; text-decoration: none; margin: 0px 0px 0px 10px}
 #main .text_container {background: #f3f3f3; padding: 20px; margin-top: 20px; color: #9A9A9A; font: 14px Arial}
 #main .text_container h3 {font: bold 14px Arial; color: #a7519a; margin-top: 10px; margin-bottom: 10px}

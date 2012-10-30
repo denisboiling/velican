@@ -4,3 +4,5 @@
 //= require jquery.endless-scroll
 //= require cart
 //= require products
+//= require jquery.bxSlider.min
+//= require main
