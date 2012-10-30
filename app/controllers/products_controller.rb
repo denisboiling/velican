@@ -10,6 +10,9 @@ class ProductsController < ApplicationController
 		else
 		  Product.paginate(:page => params[:page], :per_page => 8)
 		end
+    if request.xhr?
+      render(@products) and return
+    end
   end
 
   def show

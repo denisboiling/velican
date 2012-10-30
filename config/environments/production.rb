@@ -9,6 +9,8 @@ Velican::Application.configure do
   config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
   config.i18n.fallbacks = true
   config.active_support.deprecation = :notify
+  config.assets.precompile += %w( jquery.endless-scroll.js )
+
 
   # ExceptionNotifier
   config.middleware.use ExceptionNotifier, :email_prefix => "[Notify velican] ",
