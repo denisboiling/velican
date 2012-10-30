@@ -49,6 +49,12 @@ destroy_order =() ->
       $("input.count_field").each ->
         $(this).val(0)
 
+remove_line_item =(id) ->
+  $.ajax
+    type: 'DELETE'
+    url: '/cart/remove_line_item'
+    data:
+      id: id
 
 $ ->
   get_cart_data()
@@ -71,4 +77,11 @@ $ ->
 
   $("a#destroy_order").live 'click', () ->
     destroy_order()
+    false
+
+  $("a.remove_line_item").bind 'click', () ->
+    console.log "DSADSDA"
+    id = $(this).parents('div.item.or:first').attr('data-line-item-id')
+    remove_line_item(id)
+    $(this).parents('div.item.or:first').remove()
     false

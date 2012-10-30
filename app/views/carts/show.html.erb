@@ -1,5 +1,5 @@
 <% @order.line_items.each do |li| %>
-  <div class="item or" id=<%= dom_id li %> >
+  <div class="item or" data-line-item-id=<%= li.id %> >
     <div class="rights">
       <div class="price or" style="text-align: left; margin-right: 125px">
 	<h2><%= li.product.title %></h2>
@@ -21,6 +21,7 @@
       </span>
     </a>
     <div class="cl"></div>
+    <%= link_to 'Удалить позицию', '', class: 'remove_line_item' %>
   </div>
 <% end %>
 

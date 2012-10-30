@@ -48,6 +48,11 @@ class CartsController < ApplicationController
     end
   end
 
+  def remove_line_item
+    Order.find_by_user_key(@user_key).line_items.find(params[:id]).delete
+    render text: 'ok'
+  end
+
   private
 
   def get_user_key
