@@ -5,8 +5,8 @@
       <%= link_to(label.title, products_path(label: label.title), class: "filters #{label.title} #{active_label(label)}") if label.products.present? -%>
     <% end %>
     <div class="search">
-      <%= form_tag products_path do %>
-	<%= text_field_tag :q, params[:q] %>
+      <%= form_tag products_path, method: :get do %>
+	<%= text_field_tag :q, params[:q], placeholder: 'Найти' %>
 	<%= submit_tag 'Поиск', class:'s'  %>
       <% end %>
     </div>

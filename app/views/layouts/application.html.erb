@@ -10,9 +10,8 @@
     <%= render 'shared/header' %>
     <%= render 'shared/head' %>
 
-    <%= render 'shared/cart' %>
-
-    <%= render 'shared/slider' %>
+    <%= render('shared/cart') if @active_page != 'cart' -%>
+    <%= render('shared/slider') if @active_page != 'cart' -%>
 
     <%= render('shared/catalog_menu') if @active_page == 'products' -%>
 

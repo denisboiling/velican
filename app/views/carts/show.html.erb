@@ -1,10 +1,10 @@
 <% @order.line_items.each do |li| %>
-  <div class="item or">
+  <div class="item or" id=<%= dom_id li %> >
     <div class="rights">
       <div class="price or" style="text-align: left; margin-right: 125px">
 	<h2><%= li.product.title %></h2>
 	<p>Размер: <span><%= li.product.size_range %></span></p>
-	<h2><span><%= li.product.price %> </span>руб.</h2>
+	<h2><span><%= li.product.price.to_i %> </span> руб.</h2>
       </div>
       <div class="quantity or" style="margin-right: 130px">
 	<h2>Количество единиц изделия</h2>
@@ -12,7 +12,7 @@
       </div>
       <div class="sum or">
 	<h2>Стоимость изделия</h2>
-	<p><span><%= number_to_currency(li.price) %> </span>руб.</p>
+	<p><span><%= li.price.to_i %> </span> руб.</p>
       </div>
     </div>
     <a href="#">
@@ -27,16 +27,16 @@
 <div class="divider"></div>
 <div class="checkout mainwidth">
   <h2>Всего позиций изделий: <span><%= @order.line_items.count %></span></h2>
-  <h2>Итоговая стоимость: <span><%= number_to_currency(@order.full_price) %> </span>руб.</h2>
+  <h2>Итоговая стоимость: <span><%= @order.full_price.to_i %> </span> руб.</h2>
   <h2>Общее количество изделий: <span><%= @order.line_items.sum(:count) %></span></h2>
 </div>
 <div class="order_form mainwidth">
   <div class="header">Регистрация заказа</div>
   <%= form_for @order.info, url: cart_path(@order), action: :update, validate: true do |f|%>
-    <%= f.text_field :customer_name %>
-    <%= f.email_field :customer_email %>
-    <%= f.text_field :customer_address %>
-    <%= f.text_area :comment %>
+    <%= f.text_field :customer_name, placeholder: 'Введите наименование заказчика' %>
+    <%= f.email_field :customer_email, placeholder: 'Введите e-mail заказчика' %>
+    <%= f.text_field :customer_address, placeholder: 'Введите адрес заказчика' %>
+    <%= f.text_area :comment, placeholder: 'Коментарии' %>
     <%= f.submit '', class:'ord_cart' %>
     <%= link_to '', destroy_order_path, method: :delete, class:'or_c' %>
   <% end %>

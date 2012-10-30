@@ -11,7 +11,7 @@
     <div class="info pr">
       <h2><%= product.title %></h2>
       <p>Размер: <span><%= product.size_range %></span></p>
-      <h2><span><%= product.price %></span>руб.</h2>
+      <h2><span><%= product.price.to_i %></span> руб.</h2>
 
       <div class="cart pr">
 	<%= link_to 'В корзину', '', class: 'add_to_cart' %>

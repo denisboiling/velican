@@ -4,6 +4,8 @@ class CartsController < ApplicationController
 
   def show
     @order = Order.find_by_user_key(@user_key)
+    redirect_to root_path unless @order
+    @active_page = 'cart'
   end
 
   def update

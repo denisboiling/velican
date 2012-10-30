@@ -1,6 +1,6 @@
 update_cart =(quantity, price) ->
   $("#cart_quantity").text(quantity)
-  $("#cart_price").text(price + ' руб.') 
+  $("#cart_price").text(parseInt(price) + ' руб.') 
   $("#order").show()
 
 
@@ -8,6 +8,9 @@ update_products_quantity =(data) ->
   for product in data
     if field = $("input.count_field[data-product-id='#{product.product_id}']:first")
       field.val(product.quantity)
+      link = field.parent().find("a.add_to_cart")
+      if link.hasClass != 'active'
+        link.addClass('active')
 
 get_cart_data =() ->
   $.getJSON '/cart/remote_cart.json', (data) ->
@@ -45,5 +48,7 @@ $ ->
     else
       product = text_field.attr('data-product-id')
       count = text_field.val()
-      add_to_cart(product, count)    
+      add_to_cart(product, count)
+      if $(this).hasClass != 'active'
+        $(this).addClass('active')
       false
