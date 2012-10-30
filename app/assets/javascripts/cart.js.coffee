@@ -1,13 +1,18 @@
 update_cart =(quantity, price) ->
   $("#cart_quantity").text(quantity)
-  $("#cart_price").text(price + ' руб.') 
-  $("#order").show()
+  $("#cart_price").text(parseInt(price) + ' руб.')
+  if ! $("#order").is(":visible")
+    $("#order").show()
+    $(window).scrollTop(0)
 
 
 update_products_quantity =(data) ->
   for product in data
     if field = $("input.count_field[data-product-id='#{product.product_id}']:first")
       field.val(product.quantity)
+      link = field.parent().find("a.add_to_cart")
+      if link.hasClass != 'active'
+        link.addClass('active')
 
 get_cart_data =() ->
   $.getJSON '/cart/remote_cart.json', (data) ->
@@ -38,6 +43,10 @@ hide_cart =() ->
 $ ->
   get_cart_data()
 
+  $("input.count_field").live 'click', () ->
+    if $(this).val() <= 0
+      $(this).val('')
+
   $("a.add_to_cart").live 'click', () ->
     text_field = $(this).parent().find("input.count_field:first")
     if text_field.val() == '' || text_field.val() <= 0
@@ -45,5 +54,7 @@ $ ->
     else
       product = text_field.attr('data-product-id')
       count = text_field.val()
-      add_to_cart(product, count)    
+      add_to_cart(product, count)
+      if $(this).hasClass != 'active'
+        $(this).addClass('active')
       false

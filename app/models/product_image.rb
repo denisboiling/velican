@@ -8,5 +8,5 @@ class ProductImage < ActiveRecord::Base
 
   attr_accessible :image, :product_id
 
-  validates :images, :product_id, presence: true
+  validates :image, :product_id, presence: true
 end

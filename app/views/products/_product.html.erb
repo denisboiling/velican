@@ -1,0 +1,23 @@
+<div class="item pr">
+  <div class="item_container pr">
+    <div class="product pr">
+      <%= image_tag product.logo.url(:medium) %>
+    </div>
+
+    <% if product.label.present? -%>
+      <div class="label pr"><%= product.label.title %></div>
+    <% end -%>
+
+    <div class="info pr">
+      <h2><%= product.title %></h2>
+      <p>Размер: <span><%= product.size_range %></span></p>
+      <h2><span><%= product.price.to_i %></span> руб.</h2>
+
+      <div class="cart pr">
+	<%= link_to 'В корзину', '', class: 'add_to_cart' %>
+	<%= number_field_tag :count, 0, :class => 'count_field', 'data-product-id' => product.id, :min => 0 %>
+      </div>
+
+    </div>
+  </div>
+</div>
