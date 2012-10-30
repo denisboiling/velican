@@ -1,7 +1,9 @@
 update_cart =(quantity, price) ->
   $("#cart_quantity").text(quantity)
-  $("#cart_price").text(parseInt(price) + ' руб.') 
-  $("#order").show()
+  $("#cart_price").text(parseInt(price) + ' руб.')
+  if ! $("#order").is(":visible")
+    $("#order").show()
+    $(window).scrollTop(0)
 
 
 update_products_quantity =(data) ->
