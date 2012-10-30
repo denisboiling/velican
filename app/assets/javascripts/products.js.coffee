@@ -7,16 +7,22 @@ load_page =() ->
     success: (response) ->
       $("div.item.pr:last").after(response)
       window.block_load_page = false
+
+clear_form_inputs =() ->
+  $("form#main_form input").each ->
+    $(this).val('')
       
 $ ->
   return if typeof(page_name) == "undefined" || page_name != "products"
 
   $("input.s").bind 'click', () ->
+    clear_form_inputs()
     $("input#q").val($("#q_fake").val())
     $("input#q").change()
     false
 
   $("a.filters").bind 'click', () ->
+    clear_form_inputs()
     if $(this).hasClass('active')
       $("input#label").val('')
     else
@@ -25,6 +31,7 @@ $ ->
     false
 
   $("a.menu").bind 'click', () ->
+    clear_form_inputs()
     if $(this).hasClass('active')
       $("input#category").val('')
     else
