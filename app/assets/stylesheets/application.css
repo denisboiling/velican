@@ -135,9 +135,10 @@ body {background: #fff}
 #main .info.pr p {font: bold 14px Arial; color: #686868; margin-top: 5px}
 #main .info.pr span {font: bold 14px Arial; color: #a7519a} 
 #main .cart.pr {background: url(/assets/trash_in.png) no-repeat; width: 115px; height: 24px; float: right; margin-top: -29px}
+#main .cart.pr.cart_gr {width: 115px; height: 24px; background: url(trash.png);}
 #main .cart input.pr {width: 23px; height: 13px; border: 1px solid #2aba74; padding-left: 2px; padding-bottom: 1px; vertical-align: middle; color: #686868}
 #main .cart a.pr {font: 14px Arial; color: #fff; text-decoration: none; margin: 0px 5px 0px 10px}
-
+#main .cart.cart_gr {width: 115px; height: 24px; background: url(trash.png);}
 
 /* MAIN */
 #main {margin-bottom: 100px; margin-top: 20px}
