@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
     elsif params[:q].present?
       @products = Product.search(title_contains: params[:q]).paginate(:page => params[:page], :per_page => 8)
     else
-      @products = Product.order('created_at DESC')
+      @products = Product.paginate(:page => params[:page], :per_page => 8)
     end
 
     if request.xhr?
