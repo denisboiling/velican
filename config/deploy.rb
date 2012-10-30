@@ -61,7 +61,7 @@ namespace :db do
   end
 
   task :load_sample, :roles => :app do
-    run "cd #{latest_release}; RAILS_ENV=#{rails_env} bundle exec rake db:drop db:create db:migrate db:seed db:load_sample --trace"
+    run "cd #{latest_release}; RAILS_ENV=#{rails_env} more_samples=true bundle exec rake db:drop db:create db:migrate db:seed db:load_sample --trace"
   end
 end
 
