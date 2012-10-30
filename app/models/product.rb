@@ -16,4 +16,6 @@ class Product < ActiveRecord::Base
   validates :title, :price, :logo, :category, :size_range, presence: true
 
   scope :without_label, where(label_id: nil)
+  scope :by_label, lambda{|label| where(label_id: label.id)}
+  scope :by_category, lambda{|category| where(category_id: category.id)}
 end
