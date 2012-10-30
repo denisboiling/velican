@@ -85,7 +85,7 @@ body {background: #fff}
 #main .order_form .header {float: left; margin: 40px 0px 10px 0px;  overflow: hidden; color: #686868; font: bold 18px Arial; text-align: center; line-height: 44px; border-radius: 5px; background: #F2E5F0; width: 100%; height: 44px;}
 #main .order_form form input {padding-left: 5px; color: #686868; border-radius: 8px; width: 952px; height: 43px; border: 1px solid #e1e1e1; margin-top: 10px; outline: none}
 #main .order_form form label {color: #686868; font: 12px Arial} 
-#main .order_form form textarea {padding-top: 5px; padding-left: 5px; color: #686868; border-radius: 8px; width: 952px; height: 38px; border: 1px solid #e1e1e1; margin-top: 10px; outline: none}
+#main .order_form form textarea {padding-top: 10px; padding-left: 5px; color: #686868; border-radius: 8px; width: 952px; height: 28px; border: 1px solid #e1e1e1; margin-top: 10px; outline: none}
 #main .order_form .ord_cart {float: left; margin: 30px 32px 30px 0px; cursor: pointer; border: none; width: 548px; height: 44px; background: url(order_b.png) no-repeat;}
 #main .order_form form a.or_c {overflow: hidden; display: block; width: 378px; height: 44px; background: url(order_cl_b.png); margin-left: 2px; margin: 30px 0px; cursor: pointer; border: none;}
 
@@ -135,10 +135,10 @@ body {background: #fff}
 #main .info.pr p {font: bold 14px Arial; color: #686868; margin-top: 5px}
 #main .info.pr span {font: bold 14px Arial; color: #a7519a} 
 #main .cart.pr {background: url(/assets/trash_in.png) no-repeat; width: 115px; height: 24px; float: right; margin-top: -29px}
-#main .cart.pr.cart_gr {width: 115px; height: 24px; background: url(trash.png);}
+#main .cart.pr.active {width: 115px; height: 24px; background: url(trash.png);}
 #main .cart input.pr {width: 23px; height: 13px; border: 1px solid #2aba74; padding-left: 2px; padding-bottom: 1px; vertical-align: middle; color: #686868}
 #main .cart a.pr {font: 14px Arial; color: #fff; text-decoration: none; margin: 0px 5px 0px 10px}
-#main .cart.cart_gr {width: 115px; height: 24px; background: url(trash.png);}
+#main .cart.active {width: 115px; height: 24px; background: url(trash.png);}
 
 /* MAIN */
 #main {margin-bottom: 100px; margin-top: 20px}
