@@ -38,4 +38,5 @@ group :development do
   gem 'capistrano'
   gem 'capistrano-unicorn'
   gem 'rvm-capistrano'
+  gem 'zeus'
 end
