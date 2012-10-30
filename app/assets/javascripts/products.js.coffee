@@ -17,12 +17,18 @@ $ ->
     false
 
   $("a.filters").bind 'click', () ->
-    $("input#label").val($(this).text())
+    if $(this).hasClass('active')
+      $("input#label").val('')
+    else
+      $("input#label").val($(this).text())
     $("input#label").change()
     false
 
   $("a.menu").bind 'click', () ->
-    $("input#category").val($(this).text())
+    if $(this).hasClass('active')
+      $("input#category").val('')
+    else
+      $("input#category").val($(this).text())
     $("input#category").change()
     false
 
