@@ -1,7 +1,6 @@
 ru:
   active_admin:
     dashboard: Общие
-    create_model: "Новый %{model}"
     scopes:
       all: Все
       complete: Новые заказы
