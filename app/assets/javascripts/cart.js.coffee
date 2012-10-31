@@ -10,9 +10,9 @@ update_products_quantity =(data) ->
   for product in data
     if field = $("input.count_field[data-product-id='#{product.product_id}']:first")
       field.val(product.quantity)
-      link = field.parent().find("a.add_to_cart")
-      if link.hasClass != 'active'
-        link.addClass('active')
+      div = field.parent()
+      if div.hasClass != 'active'
+        div.addClass('active')
 
 get_cart_data =() ->
   $.getJSON '/cart/remote_cart.json', (data) ->
@@ -89,8 +89,8 @@ $ ->
       product = text_field.attr('data-product-id')
       count = text_field.val()
       add_to_cart(product, count)
-      if $(this).hasClass != 'active'
-        $(this).addClass('active')
+      if $(this).parent().hasClass != 'active'
+        $(this).parent().addClass('active')
       false
 
   $("a#destroy_order").live 'click', () ->
