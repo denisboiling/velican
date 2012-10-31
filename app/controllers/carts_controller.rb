@@ -13,7 +13,7 @@ class CartsController < ApplicationController
     @order.info.update_attributes(params[:order_info])
     @order.to_complete!
     cookies.delete :user_key
-    flash[:notice] = 'Заявка отправленна, с вами созвоняться'
+    flash[:success] = 'Заявка отправленна, с вами созвоняться'
     redirect_to root_path
   end
 
@@ -44,7 +44,8 @@ class CartsController < ApplicationController
     if request.xhr?
       render text: 'ok'
     else
-      redirect_back_or_default
+      flash[:warning] = 'Корзина успешно очищена.'
+      redirect_to root_path
     end
   end
 
