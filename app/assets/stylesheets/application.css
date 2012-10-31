@@ -111,10 +111,11 @@ body {background: #fff}
 #order .quantity.name {width: 43px}
 #order .quantity.price {width: 120px}
 
-/*	SLIDES	*/
+/*	SLIDES	*/ 
 #slides {height: 265px; background: url(/assets/shadow_s.png) no-repeat center bottom; position: relative; margin-top: -35px; margin-bottom: 20px}
 #slides .slide_container {background: #fff; overflow: hidden; width: 807px; height: 241px; position: relative; border: 1px solid #d6d6d6; margin: 0px auto}
-#slides .slide_container .sl {list-style: none; width: 807px; overflow: hidden; margin: 0px; padding: 0px}
+#slides .slide_container .sl:last-child {display: block;}
+#slides .slide_container .sl {display: none; float: left; list-style: none; width: 807px; overflow: hidden; margin: 0px; padding: 0px}
 #slides .left, #slides .right {position: absolute; width: 45px; height: 45px; cursor: pointer; top: 0px; top: 40%}
 #slides .left:hover, #slides .right:hover {opacity: 0.5} 
 #slides .left {background: url(/assets/arrow_l.png); left: 0px;}
@@ -161,8 +162,9 @@ body {background: #fff}
 #main .product {width: 310px; height: 368px; background-repeat: no-repeat; background-position: center bottom}
 #main .product:hover {opacity: 0.6}
 #main .item_container:hover .popup {display: block}
+#main .item_container:hover .popup {display: block}
 #main .popup {opacity: 0.8; display: none; padding: 15px; background: url(/assets/bg_pr.png); position: absolute; left: 0px; right: 0px; bottom: 0px}
-#main .popup:hover {display: block;}
+#main .popup:hover .product {opacity: 0.6}
 #main .popup h2 {font: 14px Arial; color: #a7519a; margin-top: 5px} 
 #main .popup h2 span {font: bold 24px Arial; } 
 #main .popup p {font: bold 14px Arial; color: #686868; margin-top: 5px}
