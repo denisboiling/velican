@@ -1,4 +1,4 @@
-<% (1..30).each do |i| %>
+<% (1..(ENV['more_samples'] ? 120 : 30)).each do |i| %>
 order_info_<%= i %>:
   order_id: <%= i %>
   customer_name: <%= Faker::Name.name %>

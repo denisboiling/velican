@@ -1,7 +1,15 @@
 <%= render @products %>
 <div class="cl"></div>
 
+<div class="hidden">
+  <%= form_tag products_path, :method => :get, :id => :main_form do %>
+    <%= hidden_field_tag :label, params[:label] %>
+    <%= hidden_field_tag :q, params[:q] %>
+    <%= hidden_field_tag :page, params[:page] || 1 %>
+    <%= hidden_field_tag :category, params[:category] %>
+  <% end %>
+</div>
+
 <script type="text/javascript">
-  var page = parseInt("<%= params[:page] || 1 %>");
   var page_name = "<%= @active_page %>";
 </script>

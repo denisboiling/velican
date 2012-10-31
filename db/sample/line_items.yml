@@ -1,6 +1,6 @@
 <% int = 0 %>
-<% (1..30).each do |order_id| %>
-<% (1..16).to_a.sample(rand(1..16)).each do |product_id| %>
+<% (1..(ENV['more_samples'] ? 120 : 30)).each do |order_id| %>
+<% (1..(ENV['more_samples'] ? 60 : 16)).to_a.sample(rand(1..16)).each do |product_id| %>
 line_item_<%= int %>:
   id: <%= int %>
   order_id: <%= order_id %>

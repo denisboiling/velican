@@ -40,12 +40,32 @@ show_cart =() ->
 hide_cart =() ->
   $("div#order").hide()
 
+destroy_order =() ->
+  $.ajax
+    type: 'DELETE'
+    url: '/cart/destroy_order'
+    complete: (data) ->
+      hide_cart()
+      $("input.count_field").each ->
+        $(this).val(0)
+
+remove_line_item =(id) ->
+  $.ajax
+    type: 'DELETE'
+    url: '/cart/remove_line_item'
+    data:
+      id: id
+
 $ ->
   get_cart_data()
 
   $("input.count_field").live 'click', () ->
     if $(this).val() <= 0
       $(this).val('')
+
+  $("input.count_field").blur ->
+    if $(this).val() == ''
+      $(this).val(0)
 
   $("a.add_to_cart").live 'click', () ->
     text_field = $(this).parent().find("input.count_field:first")
@@ -58,3 +78,14 @@ $ ->
       if $(this).hasClass != 'active'
         $(this).addClass('active')
       false
+
+  $("a#destroy_order").live 'click', () ->
+    destroy_order()
+    false
+
+  $("a.remove_line_item").bind 'click', () ->
+    console.log "DSADSDA"
+    id = $(this).parents('div.item.or:first').attr('data-line-item-id')
+    remove_line_item(id)
+    $(this).parents('div.item.or:first').remove()
+    false

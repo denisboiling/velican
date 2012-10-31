@@ -1,4 +1,4 @@
-<% (1..16).each do |product_id| %>
+<% (1..(ENV['more_samples'] ? 60 : 16)).each do |product_id| %>
 <% rand(5).times.each do |i| %>
 product_image_<%= product_id %>_<%= i %>:
   product_id: <%= product_id %>

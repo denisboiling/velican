@@ -1,4 +1,4 @@
-<% (1..30).each do |i| %>
+<% (1..(ENV['more_samples'] ? 120 : 30)).each do |i| %>
 order_<%= i %>:
   id: <%= i %>
   user_key: aaaaaaaa

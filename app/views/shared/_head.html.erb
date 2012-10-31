@@ -1,12 +1,13 @@
 <div id="head">
   <div class="center">
-    
+
     <% Label.all.each do |label| -%>
       <%= link_to(label.title, products_path(label: label.title), class: "filters #{label.title} #{active_label(label)}") if label.products.present? -%>
     <% end %>
+
     <div class="search">
       <%= form_tag products_path, method: :get do %>
-	<%= text_field_tag :q, params[:q], placeholder: 'Найти' %>
+	<%= text_field_tag (@active_page && @active_page == 'products' ? :q_fake : :q), params[:q], placeholder: 'Найти' %>
 	<%= submit_tag 'Поиск', class:'s'  %>
       <% end %>
     </div>
