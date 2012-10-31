@@ -67,6 +67,8 @@ body {background: #fff}
 #main .item.or {position: relative; padding: 15px 0px; height: 85px; background: none}
 #main .rights {float: right; margin-left: 40px}
 #main .rights div {float: left; text-align: center; width: 265px}
+#main a.pr {width: 67px; height: 81px; display: block; float: left; border-radius: 8px; border: 1px solid #a7519a}
+#main a.pr img {width: 65px; height: 79px}
 #main img {border-radius: 8px;}
 #main .item .price.or h2 {font: 14px Arial; color: #a7519a; margin-top: 5px} 
 #main .item .price h2.or span {font: bold 24px Arial; } 
@@ -78,6 +80,7 @@ body {background: #fff}
 #main .item .sum.or h2 span {font: bold 24px Arial; color: #686868} 
 #main .item .sum.or p {font: 14px Arial; color: #686868}
 #main .item .sum.or p span {font: bold 24px Arial; color: #686868}
+#main .item a.del {border: none; background: url(/assets/del.png) no-repeat center bottom; width: 50px; height: 63px; font: 12px Arial; color: #999; text-decoration: none; float: right;}
 #main .checkout {margin-top: 30px; height: 100px;}
 #main .checkout h2 {float: left; width: 398px; font: bold 18px Arial; color: #A7519A;}
 #main .checkout h2 span {font: bold 18px Arial; color: #686868;}
@@ -103,7 +106,7 @@ body {background: #fff}
 
 /*	SLIDES	*/
 #slides {height: 265px; background: url(/assets/shadow_s.png) no-repeat center bottom; position: relative; margin-top: -35px; margin-bottom: 20px}
-#slides .slide_container {overflow: hidden; width: 807px; height: 241px; position: relative; border: 1px solid #d6d6d6; margin: 0px auto}
+#slides .slide_container {background: #fff; overflow: hidden; width: 807px; height: 241px; position: relative; border: 1px solid #d6d6d6; margin: 0px auto}
 #slides .slide_container .sl {list-style: none; width: 807px; overflow: hidden; margin: 0px; padding: 0px}
 #slides .left, #slides .right {position: absolute; width: 45px; height: 45px; cursor: pointer; top: 0px; top: 40%}
 #slides .left:hover, #slides .right:hover {opacity: 0.5} 

@@ -1,5 +1,5 @@
 <div id="slides" class="mainwidth">
-  <div class="slide_container" style="background: #fff;">
+    <div class="slide_container">
             <div class="sl" style="float: left; display: none ">
               <a> <img src="i/banner1.png" alt="slide"> </a>
             </div>
@@ -16,22 +16,6 @@
               <a> <img src="i/banner.png" alt="slide"> </a>
             </div>
         </div>
-        
-  <div class="slide_container">
-    <ul style="width: 1614px; margin-left: -807px; margin-top: -24px">
-      <% Banner.all.each do |banner| %>
-	<li style="float: left; ">
-	  <%= link_to image_tag(banner.image.url(:medium)), '#' %>
-	  <%= banner.text %>
-	</li>
-      <% end %>
-    </ul>
-
-  </div>
-  <div class="left">
-    <a href="javascript:void(0);"></a>
-  </div>
-  <div class="right">
-    <a href="javascript:void(0);"></a>
-  </div>
-</div>
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>  
