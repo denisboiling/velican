@@ -23,6 +23,7 @@ Velican::Application.routes.draw do
 
   match '/cart/remote_cart.json' => 'carts#remote_cart'
   match '/cart/add_to_cart' => 'carts#add_to_cart', :via => :put
+  match '/cart/update_line_item' => 'carts#update_line_item', :via => :put
   match '/cart/destroy_order' => 'carts#destroy_order', :via => :delete, :as => :destroy_order
   match '/cart/remove_line_item' => 'carts#remove_line_item', :via => :delete, :as => :remove_line_item
 

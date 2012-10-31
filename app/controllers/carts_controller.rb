@@ -22,7 +22,7 @@ class CartsController < ApplicationController
     respond_to do |format|
       format.json { render :json => {
 	  order: order,
-          line_items: order.present? ? order.line_items.map {|li| { product_id: li.product_id, quantity: li.count }} : []
+	  line_items: order.present? ? order.line_items.map {|li| { product_id: li.product_id, quantity: li.count }} : []
 	}
       }
     end
@@ -33,7 +33,23 @@ class CartsController < ApplicationController
     respond_to do |format|
       format.json { render :json => {
 	  order: order,
-          line_items: order.line_items.map {|li| { product_id: li.product_id, quantity: li.count }}
+	  line_items: order.line_items.map {|li| { product_id: li.product_id,
+	      quantity: li.count
+	    }}
+	}
+      }
+    end
+  end
+
+  def update_line_item
+    line_item = Order.find_by_user_key(@user_key).line_items.find(params[:line_item_id])
+    line_item.update_attribute(:count, params[:quantity])
+    respond_to do |format|
+      format.json { render :json => {
+	  line_item: LineItem.find(line_item),
+          line_items_count: line_item.order.line_items.count,
+          full_price: line_item.order.full_price.to_i,
+          products_quantity: line_item.order.line_items.sum(:count)
 	}
       }
     end
@@ -50,8 +66,17 @@ class CartsController < ApplicationController
   end
 
   def remove_line_item
-    Order.find_by_user_key(@user_key).line_items.find(params[:id]).delete
-    render text: 'ok'
+    order = Order.find_by_user_key(@user_key)
+    order.line_items.find(params[:id]).destroy
+    order = Order.find(order)
+    respond_to do |format|
+      format.json { render :json => {
+          line_items_count: order.line_items.count,
+          full_price: order.full_price.to_i,
+          products_quantity: order.line_items.sum(:count)
+	}
+      }
+    end
   end
 
   private
