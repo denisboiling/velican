@@ -34,12 +34,13 @@ body {background: #fff}
 #header .contact span {font: italic 16px Araal; color: #a7519a;}
 
 /* POPUP_PR */
-.popup_pr {display: none; z-index: 200; background: url(bg_popup.png) repeat; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px}
+#popup_pr {display: none; z-index: 200; background: url(bg_popup.png) repeat; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px}
 .popup.item {float: left; background: #fff; height: 346px; position: fixed; top: 50%; left: 50%; margin-top: -173px; margin-left: -108px; z-index: 300; display: none}
 .popup.item .arrow {top: 118px; position: absolute; width: 39px; height: 39px; text-align: center; font: 12px Arial; color: #fff; line-height: 24px}
 .popup.item .item_container {width: 215px; height: 257px; background: #fff; position: relative;}
-.popup.item .product {width: 215px; height: 257px; background-repeat: no-repeat; background-position: center bottom; margin-bottom: 10px}
+.popup.item .product {overflow: hidden; list-style: none;  position: relative; width: 215px; height: 257px; background-repeat: no-repeat; background-position: center bottom; margin-bottom: 10px}
 .popup.item .product:hover {}
+.popup.item .product img {float: left;}
 .popup.item .info {padding: 0px 0px 5px 5px; background: url(bg_pr.png); left: 0px; right: 0px; bottom: 0px}
 .popup.item .info h2 {font: 14px Arial; color: #a7519a; margin-top: 5px} 
 .popup.item .info h2 span {font: bold 24px Arial; } 
