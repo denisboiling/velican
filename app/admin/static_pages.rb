@@ -7,7 +7,9 @@ ActiveAdmin.register StaticPage do
 
   index do
     column :name
-    column :permalink
+    column :permalink do |static_page|
+      link_to static_page.permalink, page_path(static_page.permalink), target: '_blank'
+    end
     default_actions
   end
 
