@@ -65,9 +65,9 @@ body {background: #fff}
 
 /*	CART	*/
 #main .item.or {position: relative; padding: 15px 0px; height: 85px; background: none}
-#main .rights {float: right; margin-left: 10px}
-#main .rights div {float: left; text-align: center; width: 200px}
-#main img {border-radius: 8px}
+#main .rights {float: right; margin-left: 40px}
+#main .rights div {float: left; text-align: center; width: 265px}
+#main img {border-radius: 8px;}
 #main .item .price.or h2 {font: 14px Arial; color: #a7519a; margin-top: 5px} 
 #main .item .price h2.or span {font: bold 24px Arial; } 
 #main .item .price.or p {font: bold 14px Arial; color: #686868; margin-top: 5px}

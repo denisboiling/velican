@@ -1,12 +1,12 @@
 <% @order.line_items.each do |li| %>
   <div class="item or" data-line-item-id=<%= li.id %> >
     <div class="rights">
-      <div class="price or" style="text-align: left; margin-right: 30px">
+      <div class="price or" style="text-align: left; margin-right: 0px">
 	<h2><%= li.product.title %></h2>
 	<p>Размер: <span><%= li.product.size_range %></span></p>
 	<h2><span><%= li.product.price.to_i %> </span> руб.</h2>
       </div>
-      <div class="quantity or" style="margin-right: 30px">
+      <div class="quantity or" style="margin-right: 0px">
 	<h2>Количество единиц изделия</h2>
 	<%= number_field_tag :count, li.count, min: 0 %>
       </div>
@@ -14,11 +14,11 @@
 	<h2>Стоимость изделия</h2>
 	<p><span><%= li.price.to_i %> </span> руб.</p>
       </div>
-      <%= link_to 'Удалить позицию', '', class: 'remove_line_item' %>
+      <%= link_to 'Удалить позицию', '', class: 'remove_line_item', style: 'background: url(/assets/del.png) no-repeat center bottom; width: 50px; height: 63px; font: 12px Arial; color: #999; text-decoration: none; float: right;' %>
     </div>
-    <a href="#">
+    <a href="#" style="width: 67px; height: 81px; display: block; float: left; border-radius: 8px; border: 1px solid #a7519a">
       <span class="container">
-	<%= image_tag li.product.logo %>
+	<%= image_tag li.product.logo, style: 'width: 65px; height: 79px' %>
       </span>
     </a>
     <div class="cl"></div>
