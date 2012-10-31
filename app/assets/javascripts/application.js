@@ -10,8 +10,5 @@
 //= require overall
 //= require cart
 //= require products
-<<<<<<< HEAD
 //= require slider
-=======
 
->>>>>>> upstream/master
