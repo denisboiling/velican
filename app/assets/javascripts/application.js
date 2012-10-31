@@ -4,4 +4,4 @@
 //= require jquery.endless-scroll
 //= require cart
 //= require products
-
+//= require slider

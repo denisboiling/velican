@@ -34,30 +34,22 @@ body {background: #fff}
 #header .contact span {font: italic 16px Araal; color: #a7519a;}
 
 /* POPUP_PR */
-#popup_pr {display: none; z-index: 200; background: url(bg_popup.png) repeat; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px}
+#popup_pr {display: none; z-index: 200; background: url(/assets/bg_popup.png) repeat; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px}
 .popup.item {float: left; background: #fff; height: 346px; position: fixed; top: 50%; left: 50%; margin-top: -173px; margin-left: -108px; z-index: 300; display: none}
 .popup.item .arrow {top: 118px; position: absolute; width: 39px; height: 39px; text-align: center; font: 12px Arial; color: #fff; line-height: 24px}
 .popup.item .item_container {width: 215px; height: 257px; background: #fff; position: relative;}
 .popup.item .product {overflow: hidden; list-style: none;  position: relative; width: 215px; height: 257px; background-repeat: no-repeat; background-position: center bottom; margin-bottom: 10px}
 .popup.item .product:hover {}
 .popup.item .product img {float: left;}
-.popup.item .info {padding: 0px 0px 5px 5px; background: url(bg_pr.png); left: 0px; right: 0px; bottom: 0px}
+.popup.item .info {padding: 0px 0px 5px 5px; background: url(/assets/bg_pr.png); left: 0px; right: 0px; bottom: 0px}
 .popup.item .info h2 {font: 14px Arial; color: #a7519a; margin-top: 5px} 
 .popup.item .info h2 span {font: bold 24px Arial; } 
 .popup.item .info p {font: bold 14px Arial; color: #686868; margin-top: 5px}
 .popup.item .info span {font: bold 14px Arial; color: #a7519a} 
-.popup.item .cart {background: url(trash_in.png) no-repeat; width: 115px; height: 24px; float: right; margin-top: -29px; margin-right: 5px}
+.popup.item .cart {background: url(/assets/trash_in.png) no-repeat; width: 115px; height: 24px; float: right; margin-top: -29px; margin-right: 5px}
 .popup.item .cart input {width: 23px; height: 13px; border: 1px solid #2aba74; padding-left: 2px; padding-bottom: 1px; vertical-align: middle; color: #686868}
 .popup.item .cart a {font: 14px Arial; color: #fff; text-decoration: none; margin: 0px 5px 0px 10px}
 
-#slides {height: 265px; background: url(/assets/shadow_s.png) no-repeat center bottom; position: relative; margin-top: -35px; margin-bottom: 20px}
-#slides .slide_container {background: #fff; overflow: hidden; width: 807px; height: 241px; position: relative; border: 1px solid #d6d6d6; margin: 0px auto}
-#slides .slide_container .sl {list-style: none; width: 807px; overflow: hidden; margin: 0px; padding: 0px}
-#slides .left, #slides .right {position: absolute; width: 45px; height: 45px; cursor: pointer; top: 0px; top: 40%}
-#slides .left:hover, #slides .right:hover {opacity: 0.5} 
-#slides .left {background: url(/assets/arrow_l.png); left: 0px;}
-#slides .right {background: url(/assets/arrow_r.png); right: 0px;}
-#slides .right a, #slides .left a {position: absolute; height: 100%; width: 100%}
 
 
 /* HEAD */ 
@@ -67,9 +59,9 @@ body {background: #fff}
 #head .filters.HIT {background: url(/assets/filter1.png);} 
 #head .filters.New {background: url(/assets/filter2.png);} 
 #head .filters.Sale {background: url(/assets/filter3.png);} 
-#head .filters.HIT.active {background: url(/assets/filter1.png);} 
-#head .filters.New.active {background: url(/assets/filter2.png);} 
-#head .filters.Sale.active {background: url(/assets/filter3.png);} 
+#head .filters.HIT.active {background: url(/assets/filter1_a.png);} 
+#head .filters.New.active {background: url(/assets/filter2_a.png);} 
+#head .filters.Sale.active {background: url(/assets/filter3_a.png);} 
 #head .filters:hover {opacity: 0.8}
 #head .search {float: left; margin-top: 30px}
 #head .search input {width: 255px; height: 20px; border: 2px solid #854585; border-radius: 3px; padding-left: 10px; color: #686868}
