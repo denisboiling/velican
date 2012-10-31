@@ -10,4 +10,5 @@
 //= require overall
 //= require cart
 //= require products
+//= require slider
 
