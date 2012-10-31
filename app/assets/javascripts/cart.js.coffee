@@ -63,10 +63,31 @@ remove_line_item =(id) ->
     url: '/cart/remove_line_item'
     data:
       id: id
+    success: (data) ->
+      $("#line_items_count").text(data.line_items_count)
+      $("#full_price").text(data.full_price)
+      $("#products_quantity").text(data.products_quantity)
+      if data.line_items_count <= 0
+        $("div.order_form").hide()
 
 show_notifications =() ->
   $("div.hidden.notifications div").each ->
     window.send_notify($(this).text(), $(this).attr('id'))
+
+line_item_update_quantity =(line_item_id, quantity) ->
+  return_response = ""
+  $.ajax
+    type: 'PUT'
+    url: '/cart/update_line_item'
+    data:
+      line_item_id: line_item_id
+      quantity: quantity
+    success: (data) ->
+      $("div.item[data-line-item-id='#{line_item_id}']:first").
+        find(".line_item_price").text(parseInt(data.line_item.price))
+      $("#line_items_count").text(data.line_items_count)
+      $("#full_price").text(data.full_price)
+      $("#products_quantity").text(data.products_quantity)
 
 $ ->
   show_notifications()
@@ -76,6 +97,11 @@ $ ->
   $("input.count_field").live 'click', () ->
     if $(this).val() <= 0
       $(this).val('')
+
+  $("input.intem_count").bind 'change', () ->
+    line_item_id = $(this).parents("div.item").attr("data-line-item-id")
+    quantity = $(this).val()
+    line_item_update_quantity(line_item_id, quantity)
 
   $("input.count_field").blur ->
     if $(this).val() == ''
