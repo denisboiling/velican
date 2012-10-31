@@ -23,5 +23,10 @@
 
     <%= render 'shared/footer' %>
 
+    <div class="hidden notifications">
+      <% flash.each do |key, msg| %>
+	<%= content_tag :div, msg, :id => key %>
+      <% end %>
+    </div>
   </body>
 </html>

@@ -2,12 +2,24 @@
 ActiveAdmin.register StaticPage do
   menu label: 'Страницы'
 
+  config.clear_sidebar_sections!
+
+  actions :index, :edit, :update, :show
+
   filter :permalink
   filter :name
 
+  controller do
+    def show
+      redirect_to page_path(resource.permalink)
+    end
+  end
+
   index do
     column :name
-    column :permalink
+    column :permalink do |static_page|
+      link_to static_page.permalink, page_path(static_page.permalink), target: '_blank'
+    end
     default_actions
   end
 

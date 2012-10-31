@@ -22,6 +22,12 @@ get_cart_data =() ->
     update_products_quantity(data.line_items)
     update_cart(quantity, price)
 
+notify_product =(product_id, quantity) ->
+  product_title = $("input.count_field[data-product-id='#{product_id}']:first").
+                    parents("div.item:first").find("h2.product_title").text()
+  product_quantity = $("input.count_field[data-product-id='#{product_id}']:first").val()
+  window.send_notify("Вы добавили продукт \"#{product_title}\" в количестве #{product_quantity} штук", "information")
+
 add_to_cart =(product, count) ->
   $.ajax
     type: 'PUT'
@@ -33,6 +39,7 @@ add_to_cart =(product, count) ->
       price = parseFloat(data.order.full_price).toFixed(2)
       quantity = data.line_items.length
       update_cart(quantity, price)
+      notify_product(product, count)
 
 show_cart =() ->
   $("div#order").show()
@@ -45,6 +52,7 @@ destroy_order =() ->
     type: 'DELETE'
     url: '/cart/destroy_order'
     complete: (data) ->
+      window.send_notify("Корзина успешно очищена.", "warning")
       hide_cart()
       $("input.count_field").each ->
         $(this).val(0)
@@ -56,7 +64,13 @@ remove_line_item =(id) ->
     data:
       id: id
 
+show_notifications =() ->
+  $("div.hidden.notifications div").each ->
+    window.send_notify($(this).text(), $(this).attr('id'))
+
 $ ->
+  show_notifications()
+
   get_cart_data()
 
   $("input.count_field").live 'click', () ->
