@@ -16,7 +16,7 @@ update_products_quantity =(data) ->
 
 get_cart_data =() ->
   $.getJSON '/cart/remote_cart.json', (data) ->
-    return if data.order == null
+    return if data.order == null || data.line_items.length == 0
     price = parseFloat(data.order.full_price).toFixed(2)
     quantity = data.line_items.length
     update_products_quantity(data.line_items)
