@@ -31,7 +31,7 @@
     </div>
 
     <% if product.label.present? -%>
-      <div class="label pr"><%= product.label.title %></div>
+      <div class="label pr <%= product.label.title.downcase %>"><%= product.label.title %></div>
     <% end -%>
 
     <div class="info pr">
