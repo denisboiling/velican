@@ -1,12 +1,12 @@
 <% @order.line_items.each do |li| %>
   <div class="item or" data-line-item-id=<%= li.id %> >
     <div class="rights">
-      <div class="price or" style="text-align: left; margin-right: 125px">
+      <div class="price or" style="text-align: left; margin-right: 30px">
 	<h2><%= li.product.title %></h2>
 	<p>Размер: <span><%= li.product.size_range %></span></p>
 	<h2><span><%= li.product.price.to_i %> </span> руб.</h2>
       </div>
-      <div class="quantity or" style="margin-right: 130px">
+      <div class="quantity or" style="margin-right: 30px">
 	<h2>Количество единиц изделия</h2>
 	<%= number_field_tag :count, li.count, min: 0 %>
       </div>
@@ -14,6 +14,7 @@
 	<h2>Стоимость изделия</h2>
 	<p><span><%= li.price.to_i %> </span> руб.</p>
       </div>
+      <%= link_to 'Удалить позицию', '', class: 'remove_line_item' %>
     </div>
     <a href="#">
       <span class="container">
@@ -21,7 +22,7 @@
       </span>
     </a>
     <div class="cl"></div>
-    <%= link_to 'Удалить позицию', '', class: 'remove_line_item' %>
+    
   </div>
 <% end %>
 
