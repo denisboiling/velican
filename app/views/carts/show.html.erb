@@ -1,12 +1,12 @@
 <% @order.line_items.each do |li| %>
   <div class="item or" data-line-item-id=<%= li.id %> >
     <div class="rights">
-      <div class="price or" style="text-align: left; margin-right: 125px">
+      <div class="price or" style="text-align: left;">
 	<h2><%= li.product.title %></h2>
 	<p>Размер: <span><%= li.product.size_range %></span></p>
 	<h2><span><%= li.product.price.to_i %> </span> руб.</h2>
       </div>
-      <div class="quantity or" style="margin-right: 130px">
+      <div class="quantity or">
 	<h2>Количество единиц изделия</h2>
 	<%= number_field_tag :count, li.count, min: 0 %>
       </div>
@@ -14,23 +14,26 @@
 	<h2>Стоимость изделия</h2>
 	<p><span><%= li.price.to_i %> </span> руб.</p>
       </div>
+      <%= link_to 'Удалить позицию', '', class: 'remove_line_item del pr' %>
     </div>
-    <a href="#">
+    <a href="#" class="pr">
       <span class="container">
 	<%= image_tag li.product.logo %>
       </span>
     </a>
     <div class="cl"></div>
-    <%= link_to 'Удалить позицию', '', class: 'remove_line_item' %>
+    
   </div>
 <% end %>
 
 <div class="divider"></div>
+<div class="cl"></div>
 <div class="checkout mainwidth">
   <h2>Всего позиций изделий: <span><%= @order.line_items.count %></span></h2>
   <h2>Итоговая стоимость: <span><%= @order.full_price.to_i %> </span> руб.</h2>
   <h2>Общее количество изделий: <span><%= @order.line_items.sum(:count) %></span></h2>
 </div>
+<div class="cl"></div>
 <div class="order_form mainwidth">
   <div class="header">Регистрация заказа</div>
   <%= form_for @order.info, url: cart_path(@order), action: :update, validate: true do |f|%>
