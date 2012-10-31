@@ -133,9 +133,9 @@ body {background: #fff}
 /* CATALOG_MAIN */
 #main .item.pr {background: none; float: left; margin: 0px 11px 20px; height: 346px; position: relative}
 #main .label.pr {top: 7px; left: -9px; position: absolute; width: 57px; height: 24px; text-align: center; font: 12px Arial; color: #fff; line-height: 24px}
-#main .label.pr.sale {background: url(/assets/label3.png);}
+#main .label.pr.sale {background: url(/assets/label1.png);}
 #main .label.pr.new {background: url(/assets/label2.png);}
-#main .label.pr.hit {background: url(/assets/label1.png);}
+#main .label.pr.hit {background: url(/assets/label3.png);}
 #main .item_container.pr {cursor: pointer; width: 215px; height: 257px; border: 1px solid #bc80b3; background: #fff; position: relative;}
 #main .product.pr {width: 215px; height: 257px; background-repeat: no-repeat; background-position: center bottom; margin-bottom: 10px}
 #main .product:hover.pr {opacity: 0.6;}
