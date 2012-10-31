@@ -5,9 +5,11 @@
   <div class="popup item">
     <div class="item_container">
       <div class="product">
+
 	<% product.images.each do |product_image| %>
 	  <%= image_tag product_image.image.url(:slider) %>
 	<% end %>
+
       </div>
       <a href="#" class="arrow left" style="background: url(/assets/arrow_l_sm.png); left: 5px"></a>
       <a href="#" class="arrow right" style="background: url(/assets/arrow_r_sm.png); right: 5px"></a>

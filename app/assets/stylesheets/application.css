@@ -34,23 +34,23 @@ body {background: #fff}
 #header .contact span {font: italic 16px Araal; color: #a7519a;}
 
 /* POPUP_PR */
-#popup_pr {display: none; z-index: 200; background: url(/assets/bg_popup.png) repeat; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px}
-.popup.item {float: left; background: #fff; height: 346px; position: fixed; top: 50%; left: 50%; margin-top: -173px; margin-left: -108px; z-index: 300; display: none}
-.popup.item .arrow {top: 118px; position: absolute; width: 39px; height: 39px; text-align: center; font: 12px Arial; color: #fff; line-height: 24px}
-.popup.item .item_container {width: 215px; height: 257px; background: #fff; position: relative;}
-.popup.item .product {overflow: hidden; list-style: none;  position: relative; width: 215px; height: 257px; background-repeat: no-repeat; background-position: center bottom; margin-bottom: 10px}
-.popup.item .product img {float: left; display: none;}
-.popup.item .product img:last-child {display: block}
-.popup.item .product:hover {}
-.popup.item .product img {float: left;}
-.popup.item .info {padding: 0px 0px 5px 5px; background: url(/assets/bg_pr.png); left: 0px; right: 0px; bottom: 0px}
-.popup.item .info h2 {font: 14px Arial; color: #a7519a; margin-top: 5px} 
-.popup.item .info h2 span {font: bold 24px Arial; } 
-.popup.item .info p {font: bold 14px Arial; color: #686868; margin-top: 5px}
-.popup.item .info span {font: bold 14px Arial; color: #a7519a} 
-.popup.item .cart {background: url(/assets/trash_in.png) no-repeat; width: 115px; height: 24px; float: right; margin-top: -29px; margin-right: 5px}
-.popup.item .cart input {width: 23px; height: 13px; border: 1px solid #2aba74; padding-left: 2px; padding-bottom: 1px; vertical-align: middle; color: #686868}
-.popup.item .cart a {font: 14px Arial; color: #fff; text-decoration: none; margin: 0px 5px 0px 10px}
+#main .item.pr .popup_pr {display: none; z-index: 200; background: url(/assets/bg_popup.png) repeat; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px}
+#main .item.pr .popup.item {width: 215px; padding: 0px; float: left; background: #fff; height: 346px; position: fixed; top: 50%; left: 50%; margin-top: -173px; margin-left: -108px; z-index: 300; display: none}
+#main .item.pr .popup.item .arrow {top: 118px; position: absolute; width: 39px; height: 39px; text-align: center; font: 12px Arial; color: #fff; line-height: 24px}
+#main .item.pr .popup.item .item_container {border: none; width: 215px; height: 257px; background: #fff; position: relative;}
+#main .item.pr .popup.item .product {overflow: hidden; list-style: none;  position: relative; width: 215px; height: 257px; background-repeat: no-repeat; background-position: center bottom; margin-bottom: 10px}
+#main .item.pr .popup.item .product img {list-style: none; border-radius: 0px; float: left; display: none;}
+#main .item.pr .popup.item .product img:last-child {display: block}
+#main .item.pr .popup.item .product:hover {}
+#main .item.pr .popup.item .product img {float: left;}
+#main .item.pr .popup.item .info {padding: 0px 0px 5px 5px; background: url(/assets/bg_pr.png); left: 0px; right: 0px; bottom: 0px}
+#main .item.pr .popup.item .info h2 {font: 14px Arial; color: #a7519a; margin-top: 5px} 
+#main .item.pr .popup.item .info h2 span {font: bold 24px Arial; } 
+#main .item.pr .popup.item .info p {font: bold 14px Arial; color: #686868; margin-top: 5px}
+#main .item.pr .popup.item .info span {font: bold 14px Arial; color: #a7519a} 
+#main .item.pr .popup.item .cart {background: url(/assets/trash_in.png) no-repeat; width: 115px; height: 24px; float: right; margin-top: -29px; margin-right: 5px}
+#main .item.pr .popup.item .cart input {width: 23px; height: 13px; border: none; padding-left: 2px; padding-bottom: 1px; vertical-align: middle; color: #686868}
+#main .item.pr .popup.item .cart a {font: 14px Arial; color: #fff; text-decoration: none; margin: 0px 5px 0px 10px}
 
 
 
@@ -133,9 +133,9 @@ body {background: #fff}
 /* CATALOG_MAIN */
 #main .item.pr {background: none; float: left; margin: 0px 11px 20px; height: 346px; position: relative}
 #main .label.pr {top: 7px; left: -9px; position: absolute; width: 57px; height: 24px; text-align: center; font: 12px Arial; color: #fff; line-height: 24px}
-#main .label.pr.sale {background: url(/assets/label3.png);}
+#main .label.pr.sale {background: url(/assets/label1.png);}
 #main .label.pr.new {background: url(/assets/label2.png);}
-#main .label.pr.hit {background: url(/assets/label1.png);}
+#main .label.pr.hit {background: url(/assets/label3.png);}
 #main .item_container.pr {cursor: pointer; width: 215px; height: 257px; border: 1px solid #bc80b3; background: #fff; position: relative;}
 #main .product.pr {width: 215px; height: 257px; background-repeat: no-repeat; background-position: center bottom; margin-bottom: 10px}
 #main .product:hover.pr {opacity: 0.6;}
@@ -151,16 +151,16 @@ body {background: #fff}
 #main .cart.pr.active {width: 115px; height: 24px; background: url(trash.png);}
 #main .cart input.pr {width: 23px; height: 13px; border: 1px solid #2aba74; padding-left: 2px; padding-bottom: 1px; vertical-align: middle; color: #686868}
 #main .cart a.pr {font: 14px Arial; color: #fff; text-decoration: none; margin: 0px 5px 0px 10px}
-#main .cart.active {width: 115px; height: 24px; background: url(trash.png);}
+#main .cart.active {width: 115px; height: 24px; background: url(/assets/trash.png);}
 
 /* MAIN */
 #main {margin-bottom: 100px; margin-top: 20px}
 #main .item {float: left; margin: 0px 3px; background: url(/assets/shadow_p.png) no-repeat center bottom; height: 430px; position: relative}
 #main .item_container {width: 310px; height: 406px; border: 1px solid #bc80b3; background: #fff; position: relative;}
 #main .head {background: #a251a7; border-bottom: 1px solid #bc80b3; font: 18px Arial; text-align: center; line-height: 37px}
-#main .head.hit {background: url(/assets/bg3.png);}
-#main .head.new {background: url(/assets/bg2.png);}
-#main .head.sale {background: url(/assets/bg1.png);}
+#main .head.HIT {background: url(/assets/bg3.png);}
+#main .head.New {background: url(/assets/bg2.png);}
+#main .head.Sale {background: url(/assets/bg1.png);}
 #main .product {width: 310px; height: 368px; background-repeat: no-repeat; background-position: center bottom}
 #main .product:hover {opacity: 0.6}
 #main .item_container:hover .popup {display: block}
