@@ -1,4 +1,3 @@
-
 <div class="item pr">
     
   <div class="popup item">
@@ -12,14 +11,15 @@
       </div>
       <a href="#" class="arrow left" style="background: url(/assets/arrow_l_sm.png); left: 5px"></a>
       <a href="#" class="arrow right" style="background: url(/assets/arrow_r_sm.png); right: 5px"></a>
+
       <div class="info">
-        <h2><%= product.title %></h2>
+	<h2 class="product_title"><%= product.title %></h2>
         <p>Размер: <span><%= product.size_range %></span></p>
         <h2><span><%= product.price.to_i %> </span>руб.</h2>
 
         <div class="cart">
 	  <%= link_to 'В корзину', '', class: 'add_to_cart' %>
-	  <%= number_field_tag :count, 0, :class => 'count_field', 'data-product-id' => product.id, :min => 0 %>
+	  <%= number_field_tag :count, 0, :class => 'count_field', 'data-product-id' => product.id, :min => 0, id: dom_id(product) + '1' %>
 	</div>
 
       </div>
@@ -42,7 +42,7 @@
 
       <div class="cart pr">
 	<%= link_to 'В корзину', '', class: 'add_to_cart' %>
-	<%= number_field_tag :count, 0, :class => 'count_field', 'data-product-id' => product.id, :min => 0 %>
+	<%= number_field_tag :count, 0, :class => 'count_field', 'data-product-id' => product.id, :min => 0, id: dom_id(product) + '2' %>
       </div>
 
     </div>
