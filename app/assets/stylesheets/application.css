@@ -168,6 +168,7 @@ body {background: #fff}
 #main .head.Sale {background: url(/assets/bg1.png);}
 #main .product {width: 310px; height: 368px; background-repeat: no-repeat; background-position: center bottom}
 #main .product:hover {opacity: 0.5}
+#main .product:hover.inactiv {cursor: default; opacity: 1}
 #main .item_container:hover .popup {display: block}
 #main .item_container:hover {}
 #main .popup {display: none; padding: 15px; background: url(/assets/bg_pr.png); position: absolute; left: 0px; right: 0px; bottom: 0px}
