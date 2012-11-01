@@ -5,6 +5,10 @@ load_page =() ->
     type: 'GET',
     url: "/products?#{$('form#main_form').serialize()}",
     success: (response) ->
+      # if response = " "
+      #   console.log "BLANK RESPONSE"
+      #   # window.block_load_page = true
+      # else
       $("div.item.pr:last").after(response)
       window.block_load_page = false
 

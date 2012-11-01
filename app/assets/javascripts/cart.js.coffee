@@ -26,8 +26,7 @@ get_cart_data =() ->
 notify_product =(product_id, quantity) ->
   product_title = $("input.count_field[data-product-id='#{product_id}']:first").
                     parents("div.item:first").find("h2.product_title").text()
-  product_quantity = $("input.count_field[data-product-id='#{product_id}']:first").val()
-  window.send_notify("Вы добавили продукт \"#{product_title}\" в количестве #{product_quantity} штук", "information")
+  window.send_notify("Вы добавили продукт \"#{product_title}\" в количестве #{quantity} штук", "information")
 
 add_to_cart =(product, count) ->
   $.ajax
@@ -57,6 +56,7 @@ destroy_order =() ->
       hide_cart()
       $("input.count_field").each ->
         $(this).val(0)
+        $(this).parent().removeClass("active")
 
 remove_line_item =(id) ->
   $.ajax
@@ -99,6 +99,11 @@ $ ->
     if $(this).val() <= 0
       $(this).val('')
 
+  $("input.count_field").live 'change', () ->
+    val = $(this).val()
+    $(this).parents("div.item.pr").find("input.count_field").each ->
+      $(this).val(val)
+
   $("input.intem_count").bind 'change', () ->
     line_item_id = $(this).parents("div.item").attr("data-line-item-id")
     quantity = $(this).val()
@@ -109,15 +114,16 @@ $ ->
       $(this).val(0)
 
   $("a.add_to_cart").live 'click', () ->
-    text_field = $(this).parent().find("input.count_field:first")
+    text_field = $(this).parents("div.cart").find("input.count_field:first")
     if text_field.val() == '' || text_field.val() <= 0
       false
     else
       product = text_field.attr('data-product-id')
       count = text_field.val()
       add_to_cart(product, count)
-      if $(this).parent().hasClass != 'active'
-        $(this).parent().addClass('active')
+      $(this).parents("div.item.pr").find("div.cart").each ->
+        if $(this).hasClass != 'active'
+          $(this).addClass('active')
       false
 
   $("a#destroy_order").live 'click', () ->
