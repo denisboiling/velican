@@ -8,7 +8,7 @@ class Product < ActiveRecord::Base
   has_attached_file :logo, styles: { thumb: '79x79', big: '310x368!', medium: '215x257' },
                             path: ":rails_root/public/system/:class/:attachment/:id/:style/:filename",
                             url: "/system/:class/:attachment/:id/:style/:filename",
-                            default_style: :thumb, default_url: 'loading.gif'
+                            default_style: :thumb
 
 
   attr_accessible :title, :price, :label, :logo, :size_range, :label_id, :category_id, :images

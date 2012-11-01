@@ -4,7 +4,7 @@ class ProductImage < ActiveRecord::Base
   has_attached_file :image, styles: { thumb: "200x200>",  slider: "215x257!" },
                            path: ":rails_root/public/system/:class/:attachment/:id/:style/:filename",
                            url: "/system/:class/:attachment/:id/:style/:filename",
-                           default_style: :thumb, default_url: 'loading.gif'
+                           default_style: :thumb
 
   attr_accessible :image, :product_id
 
