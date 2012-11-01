@@ -5,8 +5,11 @@ load_page =() ->
     type: 'GET',
     url: "/products?#{$('form#main_form').serialize()}",
     success: (response) ->
-      $("div.item.pr:last").after(response)
-      window.block_load_page = false
+      if response = " "
+        window.block_load_page = true
+      else
+        $("div.item.pr:last").after(response)
+        window.block_load_page = false
 
 clear_form_inputs =() ->
   $("form#main_form input").each ->
