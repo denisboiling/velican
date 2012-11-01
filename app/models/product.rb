@@ -18,4 +18,16 @@ class Product < ActiveRecord::Base
   scope :without_label, where(label_id: nil)
   scope :by_label, lambda{|label| where(label_id: label.id)}
   scope :by_category, lambda{|category| where(category_id: category.id)}
+
+  class << self
+    # TODO: rewrite. bugagaga
+    def for_main
+      products = []
+      Label.all.each do |label|
+        _product = self.by_label(label).first || (self.without_label.sample if self.without_label.present? ) || self.all.sample
+        products << _product if _product
+      end
+      products
+    end
+  end
 end

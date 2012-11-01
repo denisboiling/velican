@@ -30,7 +30,15 @@ after "deploy:restart","deploy:cleanup"
 
 before "bundle:install", "deploy:remove_assets_folder"
 before "deploy:finalize_update", "shared:symlinks"
+
+if ENV['cleanup_release']
+  before "db:create", 'unicorn:stop'
+  before "db:create", "db:drop"
+  after 'deploy:migrate', "db:seed"
+end
+
 after "shared:symlinks", "db:create"
+after "db:create", "deploy:migrate"
 before "unicorn:reload", "unicorn:stop"
 
 if ENV['test']
@@ -54,6 +62,10 @@ end
 namespace :db do
   task :create, :roles => :app do
     run "cd #{latest_release}; RAILS_ENV=#{rails_env} bundle exec rake db:create"
+  end
+
+  task :drop, :roles => :app do
+    run "cd #{latest_release}; RAILS_ENV=#{rails_env} bundle exec rake db:drop"
   end
 
   task :seed, :roles => :app do
