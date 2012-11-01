@@ -13,15 +13,15 @@ $ ->
     last.appendTo(inner).fadeIn "fast"
 
   $("#main .product.pr").click ->
-    $("#popup_pr").show()
+    $(".popup_pr").show()
     $(".popup.item").show()
 
-  $("#popup_pr").click ->
-    $("#popup_pr").hide()
+  $(".popup_pr").click ->
+    $(".popup_pr").hide()
     $(".popup.item").hide()
 
   $(".popup.item .cart a").click ->
-    $("#popup_pr").hide()
+    $(".popup_pr").hide()
     $(".popup.item").hide()
 
 

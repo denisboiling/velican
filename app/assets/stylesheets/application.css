@@ -34,7 +34,7 @@ body {background: #fff}
 #header .contact span {font: italic 16px Araal; color: #a7519a;}
 
 /* POPUP_PR */
-#main .item.pr .popup_pr {display: none; z-index: 200; background: url(/assets/bg_popup.png) repeat; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px}
+#main .item.pr .popup_pr {opacity: 0.2; cursor: pointer; display: none; z-index: 200; background: url(/assets/bg_popup.png) repeat; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px}
 #main .item.pr .popup.item {width: 215px; padding: 0px; float: left; background: #fff; height: 346px; position: fixed; top: 50%; left: 50%; margin-top: -173px; margin-left: -108px; z-index: 300; display: none}
 #main .item.pr .popup.item .arrow {top: 118px; position: absolute; width: 39px; height: 39px; text-align: center; font: 12px Arial; color: #fff; line-height: 24px}
 #main .item.pr .popup.item .item_container {border: none; width: 215px; height: 257px; background: #fff; position: relative;}
@@ -88,7 +88,7 @@ body {background: #fff}
 #main .item .sum.or h2 span {font: bold 24px Arial; color: #686868} 
 #main .item .sum.or p {font: 14px Arial; color: #686868}
 #main .item .sum.or p span {font: bold 24px Arial; color: #686868}
-#main .item a.del {border: none; background: url(/assets/del.png) no-repeat center bottom; width: 50px; height: 63px; font: 12px Arial; color: #999; text-decoration: none; float: right;}
+#main .item a.del {cursor: pointer; border: none; background: url(/assets/del.png) no-repeat center bottom; width: 50px; height: 63px; font: 12px Arial; color: #999; text-decoration: none; float: right;}
 #main .item a.del:hover {opacity: 0.8} 
 #main .checkout {margin-top: 30px; height: 100px;}
 #main .checkout h2 {float: left; width: 398px; font: bold 18px Arial; color: #A7519A;}
