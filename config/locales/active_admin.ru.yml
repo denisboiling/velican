@@ -1,5 +1,18 @@
 ru:
+  formtastic:
+    :yes: Да
+    :no: Нет
+    :create: 'Создать %{model}'
+    :update: 'Обновить %{model}'
+    :submit: 'Отправить %{model}'
+    :cancel: 'Отменить %{model}'
+    :reset: 'Резатнуть %{model}'
+    :required: 'Обязательно'
   active_admin:
+    new_model: "Cadastrar %{model}"
+    create_model: "Cadastrar %{model}"
+    edit_model: "Editar %{model}"
+    update_model: "Editar %{model}"
     dashboard: Общие
     scopes:
       all: Все

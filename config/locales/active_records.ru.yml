@@ -1,6 +1,11 @@
 ru:
   activerecord:
     models:
+      category:
+        one: Категорию
+        few: Категории
+        many: Категории
+        other: Категории
       admin_user:
         one: Администратор
         few: Администраторы
@@ -56,3 +61,5 @@ ru:
         created_at: Дата создания
         updated_at: Дата последнего обновления
         state: Статус
+      category:
+        title: Название

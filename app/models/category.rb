@@ -3,11 +3,5 @@ class Category < ActiveRecord::Base
 
   attr_accessible :title
 
-  # scope :available, joins(:pro)
-
-  # class << self
-  #   def availables
-  #     self.all.map {|c| c if c.products.present?}
-  #   end
-  # end
+  validates :title, presence: :true
 end
