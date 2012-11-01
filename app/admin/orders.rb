@@ -2,10 +2,12 @@
 ActiveAdmin.register Order do
   menu label: 'Заказы'
 
+  config.clear_sidebar_sections!
+
+  actions :index, :edit, :update, :show
+
   scope :complete, default: true
   scope :done
-
-  config.clear_sidebar_sections!
 
   controller do
     def remove_line_item
