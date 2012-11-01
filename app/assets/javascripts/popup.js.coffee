@@ -1,27 +1,25 @@
 $ ->    
-  $("#main .item.pr .popup.item .arrow.left").click ->
-    inner = $(this).siblings(".popup.item .product")
+  $("#main .item.pr .popup.item .arrow.left").live "click", ->
+    inner = $(this).siblings(".product")
     first = inner.children(":last")
     first.prependTo(inner).fadeOut "fast"
     inner.children(":last").fadeIn "fast"
 
-  $("#main .item.pr .popup.item .arrow.right").click ->
-    inner = $(this).siblings(".popup.item .product")
+  $("#main .item.pr .popup.item .arrow.right").live "click", ->
+    inner = $(this).siblings(".product")
     last = inner.children(":first")
     first = inner.children(":last")
     first.fadeOut "fast"
     last.appendTo(inner).fadeIn "fast"
 
-  $("#main .product.pr").click ->
+  $("#main .product.pr").live "click", -> 
     $("#main .popup_pr").show()
-    $(".popup.item").show()
+    $(this).closest(".item.pr").find(".popup.item").show()
 
-  $(".popup_pr").click ->
+  $("#main .popup_pr").live "click", ->
     $("#main .popup_pr").hide()
-    $(".popup.item").hide()
+    $("#main .item.pr .popup.item").hide()
 
-  $(".popup.item .cart a").click ->
-    $("#main .popup_pr").hide()
-    $(".popup.item").hide()
+
 
 
