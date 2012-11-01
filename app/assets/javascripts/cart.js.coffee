@@ -8,11 +8,12 @@ update_cart =(quantity, price) ->
 
 update_products_quantity =(data) ->
   for product in data
-    if field = $("input.count_field[data-product-id='#{product.product_id}']:first")
-      field.val(product.quantity)
-      div = field.parent()
-      if div.hasClass != 'active'
-        div.addClass('active')
+    if fields = $("input.count_field[data-product-id='#{product.product_id}']")
+      for field in fields
+        $(field).val(product.quantity)
+        div = $(field).parent()
+        if div.hasClass != 'active'
+          div.addClass('active')
 
 get_cart_data =() ->
   $.getJSON '/cart/remote_cart.json', (data) ->
