@@ -4,6 +4,8 @@ ActiveAdmin.register Product do
 
   config.clear_sidebar_sections!
 
+  actions :index, :edit, :update, :new, :create, :destroy
+
   form partial: 'form'
 
   controller do
@@ -20,6 +22,15 @@ ActiveAdmin.register Product do
       end
       render :layout => false
     end
+
+    def create
+      create! { redirect_to(edit_admin_product_path(resource)) and return }
+    end
+
+    def update
+      update! { redirect_to(edit_admin_product_path(resource)) and return }
+    end
+
   end
 
   index do
