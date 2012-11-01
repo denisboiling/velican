@@ -121,7 +121,7 @@ $ ->
       product = text_field.attr('data-product-id')
       count = text_field.val()
       add_to_cart(product, count)
-      $(this).parents("div.item.pr").find("div.cart").each ->
+      $(this).parents("div.item").find("div.cart").each ->
         if $(this).hasClass != 'active'
           $(this).addClass('active')
       false
