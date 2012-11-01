@@ -6,10 +6,11 @@ load_page =() ->
     url: "/products?#{$('form#main_form').serialize()}",
     success: (response) ->
       if response = " "
-        window.block_load_page = true
+        console.log "BLANK RESPONSE"
+        # window.block_load_page = true
       else
-        $("div.item.pr:last").after(response)
-        window.block_load_page = false
+      $("div.item.pr:last").after(response)
+      window.block_load_page = false
 
 clear_form_inputs =() ->
   $("form#main_form input").each ->
