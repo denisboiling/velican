@@ -37,15 +37,17 @@ body {background: #fff}
 #main .popup_pr {cursor: pointer; display: none; z-index: 200; background: url(/assets/bg_popup.png) repeat; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px}
 #main .item.pr .popup.item {width: 275px; padding: 0px; float: left; background: #fff; height: 346px; position: fixed; top: 50%; left: 50%; margin-top: -173px; margin-left: -108px; z-index: 300; display: none}
 #main .item.pr .popup.item .arrow {top: 118px; position: absolute; width: 39px; height: 39px; text-align: center; font: 12px Arial; color: #fff; line-height: 24px}
+#main .item.pr .popup.item .arrow.left {background: url(/assets/arrow_l_sm.png); left: 5px}
+#main .item.pr .popup.item .arrow.right {background: url(/assets/arrow_r_sm.png); right: 5px}
 #main .item.pr .popup.item .arrow.left:hover {background: url(/assets/arrow_l_sm_h.png);} 
 #main .item.pr .popup.item .arrow.right:hover {background: url(/assets/arrow_r_sm_h.png);} 
 #main .item.pr .popup.item .item_container {border: none; width: 275px; height: 257px; background: #fff; position: relative;}
-#main .item.pr .popup.item .product {padding-left: 30px; padding-right: 30px; overflow: hidden; list-style: none;  position: relative; width: 215px; height: 257px; background-repeat: no-repeat; background-position: center bottom; margin-bottom: 10px}
+#main .item.pr .popup.item .product {padding-top: 20px; padding-left: 30px; padding-right: 30px; overflow: hidden; list-style: none;  position: relative; width: 215px; height: 257px; background-repeat: no-repeat; background-position: center bottom; margin-bottom: 10px}
 #main .item.pr .popup.item .product img {list-style: none; border-radius: 0px; float: left; display: none;}
 #main .item.pr .popup.item .product img:last-child {display: block}
 #main .item.pr .popup.item .product:hover {}
 #main .item.pr .popup.item .product img {float: left;}
-#main .item.pr .popup.item .info {padding: 0px 0px 5px 5px; background: url(/assets/bg_pr.png); left: 0px; right: 0px; bottom: 0px}
+#main .item.pr .popup.item .info {padding: 0px 30px 5px 30px; background: url(/assets/bg_pr.png); left: 0px; right: 0px; bottom: 0px}
 #main .item.pr .popup.item .info h2 {font: 14px Arial; color: #a7519a; margin-top: 5px} 
 #main .item.pr .popup.item .info h2 span {font: bold 24px Arial; } 
 #main .item.pr .popup.item .info p {font: bold 14px Arial; color: #686868; margin-top: 5px}
@@ -140,7 +142,7 @@ body {background: #fff}
 #main .label.pr.new {background: url(/assets/label2.png);}
 #main .label.pr.hit {background: url(/assets/label3.png);}
 #main .item_container.pr {cursor: pointer; width: 215px; height: 257px; border: 1px solid #bc80b3; background: #fff; position: relative;}
-#main .product.pr {width: 215px; height: 257px; background-repeat: no-repeat; background-position: center bottom; margin-bottom: 10px}
+#main .product.pr {text-align: center; width: 215px; height: 257px; background-repeat: no-repeat; background-position: center bottom; margin-bottom: 10px}
 #main .product:hover.pr {}
 #main .item_container:hover.pr  {border: 2px solid #bc80b3; margin: -1px}
 #main .item_container:hover .info.pr {}
