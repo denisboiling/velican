@@ -1,4 +1,5 @@
 Velican::Application.configure do
+  config.action_controller.default_url_options = {:host => "localhost:3000"}
   config.cache_classes = false
   config.whiny_nils = true
   config.consider_all_requests_local       = true

@@ -1,0 +1,4 @@
+Ваш заказ #<%= @order.id %><br />
+Сумма заказа: <%= @order.full_price.to_i %><br />
+Количество изделий: <%= @order.line_items.count %><br />
+Общие количество товара: <%= @order.line_items.sum(:count) %><br />
