@@ -12,4 +12,12 @@ ActiveAdmin.register Category do
     end
     default_actions
   end
+
+  form do |f|
+    f.inputs do
+      f.input :title
+      f.input :text, as: :html_editor
+    end
+    f.buttons
+  end
 end
