@@ -18,3 +18,4 @@ pickle-email-*.html
 /.rvmrc
 /config/database.yml
 /zeus.json
+/.rbenv-version
