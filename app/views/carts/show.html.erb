@@ -37,7 +37,8 @@
 <div class="order_form mainwidth">
   <div class="header">Регистрация заказа</div>
   <%= form_for @order.info, url: cart_path(@order), action: :update, validate: true do |f|%>
-    <%= f.text_field :customer_name, placeholder: 'Введите наименование заказчика' %>
+    <%= f.text_field :customer_name, placeholder: 'Введите Фамилию Имя Отчество' %>
+    <%= f.text_field :customer_phone, placeholder: 'Введите Телефон' %>
     <%= f.email_field :customer_email, placeholder: 'Введите e-mail заказчика' %>
     <%= f.text_field :customer_address, placeholder: 'Введите адрес заказчика' %>
     <%= f.text_area :comment, placeholder: 'Коментарии' %>

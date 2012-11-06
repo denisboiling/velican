@@ -90,6 +90,7 @@ ActiveRecord::Schema.define(:version => 20121029072128) do
     t.string   "customer_name"
     t.string   "customer_email"
     t.string   "customer_address"
+    t.string   "customer_phone"
     t.text     "comment"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
