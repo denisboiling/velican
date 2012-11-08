@@ -42,10 +42,10 @@ body {background: #fff}
 #main .item.pr .popup.item .arrow.left:hover {background: url(/assets/arrow_l_sm_h.png);} 
 #main .item.pr .popup.item .arrow.right:hover {background: url(/assets/arrow_r_sm_h.png);} 
 #main .item.pr .popup.item .item_container {border: none; width: 275px; height: 257px; background: #fff; position: relative;}
-#main .item.pr .popup.item .product {padding-top: 20px; padding-left: 30px; padding-right: 30px; overflow: hidden; list-style: none;  position: relative; width: 215px; height: 257px; background-repeat: no-repeat; background-position: center bottom; margin-bottom: 10px}
-#main .item.pr .popup.item .product img {list-style: none; border-radius: 0px; float: left; display: none;}
+#main .item.pr .popup.item .product {margin: 0px auto; padding-top: 20px; overflow: hidden; list-style: none;  position: relative; width: 215px; height: 257px; background-repeat: no-repeat; background-position: center bottom; margin-bottom: 10px}
+#main .item.pr .popup.item .product img {margin: 0px auto; list-style: none; border-radius: 0px; display: none;}
 #main .item.pr .popup.item .product img:last-child {display: block}
-#main .item.pr .popup.item .product:hover {}
+#main .item.pr .popup.item .product:hover {opacity: 1}
 #main .item.pr .popup.item .product img {float: left;}
 #main .item.pr .popup.item .info {padding: 0px 30px 5px 30px; background: url(/assets/bg_pr.png); left: 0px; right: 0px; bottom: 0px}
 #main .item.pr .popup.item .info h2 {font: 14px Arial; color: #a7519a; margin-top: 5px} 
