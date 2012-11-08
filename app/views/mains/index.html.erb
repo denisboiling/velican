@@ -4,7 +4,7 @@
       <% if product.label.present? %>
 	<div class="head <%= product.label.title %>"><%= product.label.title %></div>
       <% else %>
-	<div class="head" style="background: url(/assets/bg1.png)"></div>
+	<div class="head"></div>
       <% end %>
       <div class="product"><%= image_tag product.logo.url(:big) %></div>
       <div class="popup">
