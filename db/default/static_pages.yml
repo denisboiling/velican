@@ -13,3 +13,7 @@ contacts:
 delivery:
   name: Доставка
   permalink: delivery
+
+catalog:
+  name: Каталог
+  permalink: catalog

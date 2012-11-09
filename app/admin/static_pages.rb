@@ -31,9 +31,9 @@ ActiveAdmin.register StaticPage do
     end
 
     f.inputs "SEO штучки" do
-      f.input :title
-      f.input :keywords
-      f.input :description
+      f.input :html_title
+      f.input :html_keywords
+      f.input :html_description
     end
     f.buttons
   end

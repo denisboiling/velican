@@ -1,6 +1,11 @@
 ru:
   activerecord:
     models:
+      label:
+        one: Лайбл
+        few: Лайблы
+        many: Лайблы
+        other: Лайблы
       category:
         one: Категорию
         few: Категории
@@ -49,9 +54,9 @@ ru:
       static_page:
         name: Название
         permalink: Адресс страницы
-        title: Название страницы
-        keywords: Ключивые слова
-        description: Описание
+        html_title: Название страницы
+        html_keywords: Ключивые слова
+        html_description: Описание
         text: Текст
       banner:
         image: Изображение
@@ -64,3 +69,11 @@ ru:
       category:
         title: Название
         text: Текст
+        html_title: Название страницы
+        html_keywords: Ключивые слова
+        html_description: Описание
+      label:
+        title: Название
+        html_title: Название страницы
+        html_keywords: Ключивые слова
+        html_description: Описание
