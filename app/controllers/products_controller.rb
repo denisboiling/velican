@@ -6,9 +6,9 @@ class ProductsController < ApplicationController
     set_seo_by_page(@page.seo_stuff)
 
     if params[:label].present?
-      label = Label.find_by_title(params[:label])
-      set_seo_by_page(label.seo_stuff)
-      @products = Product.by_label(label).paginate(:page => params[:page], :per_page => 8)
+      @label = Label.find_by_title(params[:label])
+      set_seo_by_page(@label.seo_stuff)
+      @products = Product.by_label(@label).paginate(:page => params[:page], :per_page => 8)
     elsif params[:category].present?
       @category = Category.find_by_title(params[:category])
       set_seo_by_page(@category.seo_stuff)

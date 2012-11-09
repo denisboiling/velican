@@ -74,6 +74,7 @@ ru:
         html_description: Описание
       label:
         title: Название
+        text: Текст
         html_title: Название страницы
         html_keywords: Ключивые слова
         html_description: Описание

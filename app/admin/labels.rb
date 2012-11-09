@@ -22,6 +22,7 @@ ActiveAdmin.register Label do
   form do |f|
     f.inputs do
       f.input :title, input_html: { readonly: true }
+      f.input :text, as: :html_editor
     end
 
     f.inputs "SEO штучки" do

@@ -1,7 +1,7 @@
 class Label < ActiveRecord::Base
   has_many :products
 
-  attr_accessible :title, :html_title, :html_keywords, :html_description
+  attr_accessible :title, :html_title, :html_keywords, :html_description, :text
 
   def seo_stuff
     return_hs = {}
