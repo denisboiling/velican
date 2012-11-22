@@ -35,14 +35,14 @@ body {background: #fff}
 
 /* POPUP_PR */
 #main .popup_pr {cursor: pointer; display: none; z-index: 200; background: url(/assets/bg_popup.png) repeat; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px}
-#main .item.pr .popup.item {width: 275px; padding: 0px; float: left; background: #fff; height: 346px; position: fixed; top: 50%; left: 50%; margin-top: -173px; margin-left: -108px; z-index: 300; display: none}
-#main .item.pr .popup.item .arrow {top: 118px; position: absolute; width: 39px; height: 39px; text-align: center; font: 12px Arial; color: #fff; line-height: 24px}
+#main .item.pr .popup.item {width: 420px; padding: 0px; float: left; background: #fff; height: 560px; position: fixed; top: 50%; left: 50%; margin-top: -344px; margin-left: -212px; z-index: 300; display: none}
+#main .item.pr .popup.item .arrow {top: 200px; position: absolute; width: 39px; height: 39px; text-align: center; font: 12px Arial; color: #fff; line-height: 24px}
 #main .item.pr .popup.item .arrow.left {background: url(/assets/arrow_l_sm.png); left: 5px}
 #main .item.pr .popup.item .arrow.right {background: url(/assets/arrow_r_sm.png); right: 5px}
 #main .item.pr .popup.item .arrow.left:hover {background: url(/assets/arrow_l_sm_h.png);} 
 #main .item.pr .popup.item .arrow.right:hover {background: url(/assets/arrow_r_sm_h.png);} 
-#main .item.pr .popup.item .item_container {border: none; width: 275px; height: 257px; background: #fff; position: relative;}
-#main .item.pr .popup.item .product {margin: 0px auto; padding-top: 20px; overflow: hidden; list-style: none;  position: relative; width: 215px; height: 257px; background-repeat: no-repeat; background-position: center bottom; margin-bottom: 10px}
+#main .item.pr .popup.item .item_container {border: none; width: 420px; height: 560px; background: #fff; position: relative;}
+#main .item.pr .popup.item .product {margin: 0px auto; padding-top: 20px; overflow: hidden; list-style: none;  position: relative; width: 420px; height: 453px; background-repeat: no-repeat; background-position: center bottom; margin-bottom: 10px}
 #main .item.pr .popup.item .product img {margin: 0px auto; list-style: none; border-radius: 0px; display: none;}
 #main .item.pr .popup.item .product img:last-child {display: block}
 #main .item.pr .popup.item .product:hover {opacity: 1}
