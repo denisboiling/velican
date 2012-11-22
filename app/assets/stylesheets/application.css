@@ -35,7 +35,7 @@ body {background: #fff}
 
 /* POPUP_PR */
 #main .popup_pr {cursor: pointer; display: none; z-index: 200; background: url(/assets/bg_popup.png) repeat; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px}
-#main .item.pr .popup.item {width: 420px; padding: 0px; float: left; background: #fff; height: 560px; position: fixed; top: 50%; left: 50%; margin-top: -344px; margin-left: -212px; z-index: 300; display: none}
+#main .item.pr .popup.item {width: 420px; padding: 0px; float: left; background: #fff; height: 560px; position: fixed; top: 50%; left: 50%; margin-top: -268px; margin-left: -212px; z-index: 300; display: none}
 #main .item.pr .popup.item .arrow {top: 200px; position: absolute; width: 39px; height: 39px; text-align: center; font: 12px Arial; color: #fff; line-height: 24px}
 #main .item.pr .popup.item .arrow.left {background: url(/assets/arrow_l_sm.png); left: 5px}
 #main .item.pr .popup.item .arrow.right {background: url(/assets/arrow_r_sm.png); right: 5px}
