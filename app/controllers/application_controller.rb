@@ -3,6 +3,12 @@ class ApplicationController < ActionController::Base
 
   before_filter :assign_user
 
+  def set_seo_by_page(seo_stuff)
+    @title = seo_stuff[:html_title]
+    @keywords = seo_stuff[:html_keywords]
+    @description = seo_stuff[:html_description]
+  end
+
   def random_sequence(count=24)
     o = [('a'..'z'),('A'..'Z')].map{|i| i.to_a}.flatten
     (count.times).map{ o[rand(o.length)] }.join

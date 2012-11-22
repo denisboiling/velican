@@ -20,7 +20,3 @@ $ ->
     $("#main .popup_pr").hide()
     $("#main .item.pr .popup.item").hide()
 
-  $("#main .product.pr.inactiv").live "click", -> 
-    $("#main .popup_pr").hide()
-    $(this).closest(".item.pr").find(".popup.item").hide()
-
