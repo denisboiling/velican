@@ -12,6 +12,12 @@ class CartsController < ApplicationController
     @order = Order.find_by_user_key(@user_key)
     @order.info.update_attributes(params[:order_info])
     @order.to_complete!
+
+    # TODO: it's shit
+    # current_user.update_attributes(phone: @order.info.customer_phone,
+    #                                address: @order.info.customer_address
+    #                     )
+
     cookies.delete :user_key
     flash[:success] = 'Заявка отправленна, с вами созвоняться'
     redirect_to root_path

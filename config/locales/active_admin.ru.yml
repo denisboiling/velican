@@ -1,4 +1,7 @@
 ru:
+  devise:
+    registrations:
+      signed_up_but_unconfirmed: 'Вы успешно подали заявку. Но пока вы не можете войти в систему, т.к. ваша учётная запись не подтверждена.'
   formtastic:
     :yes: Да
     :no: Нет

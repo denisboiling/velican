@@ -10,11 +10,13 @@
       <div class="popup">
 	<h2 class="product_title"><%= product.title %></h2>
 	<p>Размер: <span><%= product.size_range %></span></p>
-	<h2><span><%= product.price.to_i %></span> руб.</h2>
-	<div class="cart">
-	  <%= link_to 'В корзину', '', class: 'add_to_cart' %>
-	  <%= number_field_tag :count, 0, :class => 'count_field', 'data-product-id' => product.id, :min => 0 %>
-	</div>
+	<% if current_user %>
+	  <h2><span><%= product.price.to_i %></span> руб.</h2>
+	  <div class="cart">
+	    <%= link_to 'В корзину', '', class: 'add_to_cart' %>
+	    <%= number_field_tag :count, 0, :class => 'count_field', 'data-product-id' => product.id, :min => 0 %>
+	  </div>
+	<% end %>
       </div>
     </div>
   </div>

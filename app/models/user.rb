@@ -6,6 +6,9 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :name, :phone, :address, :comment
 
+  # TODO: is not secure
+  attr_accessible :unconfirmed_email, :available
+
   scope :availables, where(available: true)
   scope :unavailables, where(available: false)
 

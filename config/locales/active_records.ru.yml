@@ -90,3 +90,7 @@ ru:
         address: Адрес
         comment: Коментарий к заявке
         available: Статус заявки
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        remember_me: Запомнить меня
+        unconfirmed_email: Неподтвержденный email
