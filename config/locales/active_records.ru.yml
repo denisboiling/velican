@@ -78,3 +78,9 @@ ru:
         html_title: Название страницы
         html_keywords: Ключивые слова
         html_description: Описание
+      user:
+        email: Email
+        name: ФИО
+        phone: Телефон
+        address: Адрес
+        comment: Коментарий к заявке

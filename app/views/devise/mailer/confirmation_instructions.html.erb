@@ -1,0 +1,11 @@
+<h2>Здравствуйте!</h2>
+<p>
+  Вы успешно зарегистрированы на сайте belvelikan.ru <br />
+  Перейдите на сайт, чтобы авторизоваться и увидеть цены на товары.
+</p>
+
+Ваш логин: <%= @resource.email %> <br />
+Для подтверждения перейдити по ссылке <%= link_to 'Открой меня', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %> <br />
+
+С уважением, <b></b>
+Администрация сайта belvelikan.ru <br />
