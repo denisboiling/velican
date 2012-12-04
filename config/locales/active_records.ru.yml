@@ -1,6 +1,11 @@
 ru:
   activerecord:
     models:
+      user:
+        one: Пользователя
+        few: Пользователи
+        many: Пользователи
+        other: Пользователи
       label:
         one: Лайбл
         few: Лайблы
@@ -84,3 +89,4 @@ ru:
         phone: Телефон
         address: Адрес
         comment: Коментарий к заявке
+        available: Статус заявки

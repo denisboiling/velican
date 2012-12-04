@@ -6,6 +6,9 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :name, :phone, :address, :comment
 
+  scope :availables, where(available: true)
+  scope :unavailables, where(available: false)
+
   validates :name, :email, presence: true
 
   def available!

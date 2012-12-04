@@ -18,3 +18,5 @@ ru:
       all: Все
       complete: Новые заказы
       done: Обработанные заказы
+      availables: Одобренные
+      unavailables: Еще не одобренные
