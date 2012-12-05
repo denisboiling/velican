@@ -29,9 +29,12 @@ body {background: #fff}
 #header .menu a {font: 18px Arial; color: #a7519a; text-decoration: none; display: inline-block; margin: 0px 10px}
 #header .menu a:hover {text-decoration: none; color: #d8507a; }
 #header .menu a.active {color: #707070;}
-#header .contact {float: right; font: bold 16px Arial; color: #686868; }
+#header .contact {float: right; font: bold 16px Arial; color: #686868; margin-top: -8px}
 #header .contact img {display: inline-block; vertical-align: middle}
 #header .contact span {font: italic 16px Araal; color: #a7519a;}
+#header .reg {background: url(/assets/reg.png); width: 136px; height: 18px; float: right; margin-right: -134px; margin-top: 17px}
+#header .reg a {font: 11px Arial; color: #686868; text-decoration: none; display: block; float: left; margin: 2px 11px 0px 10px}
+#header .reg a:hover {color: #a7519a}
 
 /* POPUP_PR */
 #main .popup_pr {cursor: pointer; display: none; z-index: 200; background: url(/assets/bg_popup.png) repeat; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px}
@@ -68,10 +71,12 @@ body {background: #fff}
 #head .filters.HIT.active {background: url(/assets/filter1_a.png);} 
 #head .filters.New.active {background: url(/assets/filter2_a.png);} 
 #head .filters.Sale.active {background: url(/assets/filter3_a.png);} 
-#head .filters:hover {opacity: 0.8}
+#head .filters.HIT:hover {background: url(/assets/filter1_a.png);}
+#head .filters.New:hover {background: url(/assets/filter2_a.png);}
+#head .filters.Sale:hover {background: url(/assets/filter3_a.png);}
 #head .search {float: left; margin-top: 30px}
 #head .search input {width: 255px; height: 20px; border: 2px solid #854585; border-radius: 3px; padding-left: 10px; color: #686868}
-#head .search input.s {padding-left: 0px; width: 50px; height: 24px; background: url(search_b.png); cursor: pointer; border: none; color: white;}
+#head .search input.s {padding-left: 0px; width: 50px; height: 24px; background: url(search_b.png) no-repeat; cursor: pointer; border: none; color: white;}
 #head .search button {width: 50px; height: 24px; background: url(/assets/search_b.png); cursor: pointer; border: none; color: #fff} 
 #head .search button:hover {opacity: 0.5} 
 
@@ -141,7 +146,7 @@ body {background: #fff}
 #main .label.pr.new {background: url(/assets/label2.png);}
 #main .label.pr.hit {background: url(/assets/label3.png);}
 #main .item_container.pr {cursor: pointer; width: 215px; height: 257px; border: 1px solid #bc80b3; background: #fff; position: relative;}
-#main .product.pr {text-align: center; width: 215px; height: 257px; background-repeat: no-repeat; background-position: center bottom; margin-bottom: 10px}
+#main .product.pr {overflow: hidden; text-align: center; width: 215px; height: 257px; background-repeat: no-repeat; background-position: center bottom; margin-bottom: 10px}
 #main .product:hover.pr {}
 #main .item_container:hover.pr  {border: 2px solid #bc80b3; margin: -1px}
 #main .item_container:hover .info.pr {}
@@ -182,6 +187,18 @@ body {background: #fff}
 #main .text_container {background: #f3f3f3; padding: 20px; margin-top: 20px; color: #9A9A9A; font: 14px Arial}
 #main .text_container h3 {font: bold 14px Arial; color: #a7519a; margin-top: 10px; margin-bottom: 10px}
 #main .text_container p {font: 14px Arial; color: #9a9a9a; margin-bottom: 15px}
+#main h2 {font: bold 14px Arial; color: #a7519a; margin-top: 10px; margin-bottom: 10px}
+
+#main form {padding-top: 100px; background: url(/assets/bg_form.png); width: 960px; height: 600px}
+#main form input {outline: medium none; font: 14px Arial; color: #686868; display: block; margin: 0px auto; border: 1px solid #E1E1E1; border-radius: 8px 8px 8px 8px; color: #686868; height: 43px; padding-left: 15px; padding-right: 15px; width: 790px; margin-top: 15px}
+#main form input.ent {margin-top: 25px; clear: left; background: url("ent_b.png") no-repeat; background-position: 0px 0px; border: medium none; cursor: pointer; height: 44px; width: 822px; font: 18px Arial; color: #fff}
+#main form input.ent:hover {background-position: 0px -53px}
+#main form .remember {height: 43px; font: 14px Arial; color: #686868; margin-left: 70px; } 
+#main form .remember input {width: 20px; margin-left: 0px; height: 20px; display: block; float: left; vertical-align: middle;}
+#main form .remember label {display: block; float: left; margin-top: 15px; margin-left: 10px} 
+#main form #error_explanation {color: red; font: 10px Arial; margin-left: 85px; position: relative;}
+#main form .field_with_errors {color: red; font: 10px Arial; position: relative; top: -10px;}
+#main form .field_with_errors label {margin-left: 70px}
 
 
 /* FOOTER */
