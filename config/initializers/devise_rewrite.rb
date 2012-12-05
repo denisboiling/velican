@@ -4,7 +4,8 @@ module Devise
       extend ActiveSupport::Concern
 
       included do
-        after_save :send_confirmation_instructions, :if => :now_available?
+        before_save :generate_confirmation_token, :if => :now_available?
+        after_save :send_activation_message, :if => :now_available?
       end
 
       protected
@@ -13,9 +14,13 @@ module Devise
         self.available_change == [false, true]
       end
 
+      def send_activation_message
+        send_devise_notification(:confirmation_instructions)
+      end
+
       def send_on_create_confirmation_instructions
         return unless self.available?
-        send_devise_notification(:confirmation_instructions)
+        super
       end
 
     end

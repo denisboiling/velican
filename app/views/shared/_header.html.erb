@@ -3,14 +3,12 @@
     <span>+7(495)</span>
     645-09-73
   </div>
-  <div class="reg">
-    <% if current_user %>
-      <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
-    <% else %>
+  <% unless current_user %>
+    <div class="reg">
       <%= link_to 'Войти', new_user_session_path %>
       <%= link_to 'Регистрация', new_user_registration_path %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
   <a href="/" class="logo"><img src="/assets/logo.png" alt="БелВеликан" /></a>
   <div class="menu">
     <%= link_to 'Главная', root_path, class: active_page('main') %>
