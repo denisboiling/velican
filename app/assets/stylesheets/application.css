@@ -21,6 +21,7 @@ img {border: none;}
 
 body {background: #fff}
 .center {width: 809px; margin: 0px auto}
+.hidden {display: none;}
 
 /* HEADER */
 #header {padding: 20px 0px 15px 0px; position: relative;}
