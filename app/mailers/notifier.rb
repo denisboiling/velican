@@ -10,7 +10,7 @@ class Notifier < ActionMailer::Base
 
   def admin_order_notify(order)
     @order = order
-    mail(to: "admin@example.com",
+    mail(to: "svetlana@belvelikan.ru",
          subject: "Новый заказ ##{@order.id}")
   end
 end

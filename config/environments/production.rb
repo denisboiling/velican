@@ -1,6 +1,7 @@
 Velican::Application.configure do
-  config.action_controller.default_url_options = {:host => "velican.bender.srv.balticit.ru"}
-  config.action_mailer.default_url_options = { :host => "velican.bender.srv.balticit.ru" }
+  config.action_controller.default_url_options = {:host => "belvelican.ru"}
+  config.action_mailer.default_url_options = { :host => "belvelican.ru" }
+
   config.cache_classes = true
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
@@ -20,8 +21,8 @@ Velican::Application.configure do
 
   # ExceptionNotifier
   config.middleware.use ExceptionNotifier, :email_prefix => "[Notify velican] ",
-  :sender_address => %{"notify"},
-  :exception_recipients => %w{ kremenev@balticit.ru }
+                                           :sender_address => %{"notify"},
+                                           :exception_recipients => %w{ kremenev@balticit.ru }
   config.action_mailer.delivery_method = :sendmail
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
