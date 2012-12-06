@@ -127,7 +127,7 @@ body {background: #fff}
 #slides {height: 265px; background: url(/assets/shadow_s.png) no-repeat center bottom; position: relative; margin-top: -35px; margin-bottom: 20px}
 #slides .slide_container {background: #fff; overflow: hidden; width: 807px; height: 241px; position: relative; border: 1px solid #d6d6d6; margin: 0px auto}
 #slides .slide_container .sl:last-child {display: block;}
-#slides .slide_container .sl {display: none; float: left; list-style: none; width: 807px; overflow: hidden; margin: 0px; padding: 0px}
+#slides .slide_container .sl {display: none; float: left; list-style: none; width: 799px; height: 234px; overflow: hidden; margin: 3px 4px; padding: 0px}
 #slides .left, #slides .right {position: absolute; width: 45px; height: 45px; cursor: pointer; top: 0px; top: 40%}
 #slides .left:hover, #slides .right:hover {opacity: 0.5} 
 #slides .left {background: url(/assets/arrow_l.png); left: 0px;}
