@@ -48,6 +48,7 @@ ActiveAdmin.register Order do
       attributes_table_for resource.info do
         row('Имя заказчика') { resource.info.customer_name }
         row('E-mail заказчика') { resource.info.customer_email }
+        row('Телефон заказчика') { resource.info.customer_phone }
         row('Адресс заказчика') { resource.info.customer_address }
         row('Комментарий') { resource.info.comment }
       end
