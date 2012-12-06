@@ -1,6 +1,6 @@
 Velican::Application.configure do
-  config.action_controller.default_url_options = {:host => "belvelican.ru"}
-  config.action_mailer.default_url_options = { :host => "belvelican.ru" }
+  config.action_controller.default_url_options = {:host => "belvelikan.ru"}
+  config.action_mailer.default_url_options = { :host => "belvelikan.ru" }
 
   config.cache_classes = true
   config.consider_all_requests_local       = false

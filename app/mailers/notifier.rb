@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 class Notifier < ActionMailer::Base
-  default from: "info@belvelican.ru"
+  default from: "info@belvelikan.ru"
 
   def customer_order_notify(order)
     @order = order
