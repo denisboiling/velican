@@ -31,20 +31,9 @@ after "deploy:restart","deploy:cleanup"
 before "bundle:install", "deploy:remove_assets_folder"
 before "deploy:finalize_update", "shared:symlinks"
 
-if ENV['cleanup_release']
-  before "db:create", 'unicorn:stop'
-  before "db:create", "db:drop"
-  after 'deploy:migrate', "db:seed"
-end
-
 after "shared:symlinks", "db:create"
 after "db:create", "deploy:migrate"
 before "unicorn:reload", "unicorn:stop"
-
-if ENV['test']
-  after "deploy:update_code", 'unicorn:stop'
-  after "deploy:update_code", "db:load_sample"
-end
 
 namespace :deploy do
   task :remove_assets_folder, roles: :app do
