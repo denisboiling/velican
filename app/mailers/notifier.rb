@@ -16,7 +16,7 @@ class Notifier < ActionMailer::Base
 
   def new_customer_request(user)
     @user = user
-    mail(to: "wolvman@mail.ru",
+    mail(to: "svetlana@belvelikan.ru",
          subject: "Появился новый пользователь #{@user.email}")
   end
 end
