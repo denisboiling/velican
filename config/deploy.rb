@@ -17,8 +17,7 @@ set :user, 'rvm_user'
 set :deploy_via, :remote_cache
 set :use_sudo, false
 
-set :rvm_type, :user
-set :rvm_ruby_string, 'ruby-1.9.3-head'
+set :rvm_type, :system
 require "rvm/capistrano"
 
 set :deploy_to, "/var/www/#{application}"
